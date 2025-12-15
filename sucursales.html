@@ -1,0 +1,691 @@
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>CLICOM</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+        <link rel="Icon" href="img/Logo_Nav_CLICOM.jpeg" type="img/x-icon">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:slnt,wght@-10..0,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oxanium:wght@200..800&display=swap');
+        </style>
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libreria Stylesheet -->
+        <link rel="stylesheet" href="lib/animate/animate.min.css"/>
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+
+         <!-- Creando mapa para las sucursales -->
+         <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+         <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+
+        <script async>(function(w, d) { var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.setAttribute("src", "https://app.bluecaribu.com/conversion/integration/62f9b1a18a0f493384ef148c04a8e800"); h.appendChild(s); })(window, document);</script>
+    </head>
+
+    <body>
+
+        <!-- Inicio Spinner  -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Cargando...</span>
+            </div>
+        </div>
+        <!-- Fin Spinner  -->
+
+        <!-- Inicio de Barra Superior -->
+        <div class="container-fluid topbar px-0 px-lg-4  py-2 d-none d-lg-block bg-success"> <!--cambiando color-->
+            <div class="container">
+                <div class="row gx-0 align-items-center">
+                    <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                        <div class="d-flex flex-wrap">
+                            <div class="border-end border-sucess pe-4">
+                                <a href="#" class="text-light medium fw-bold"><i class="fas fa-map-marker-alt text-success me-2"></i>Encuentranos</a>
+                            </div>
+                            <div class="ps-3">
+                                <a href="mailto:example@gmail.com" class="text-light medium"><i class="fas fa-envelope text-success me-2"></i>soporte@clicom.com.mx</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center text-lg-end">
+                        <div class="d-flex justify-content-end">
+                            <div class="d-flex border-end border-sucess pe-3">
+                                <a class="btn p-0 text-success me-3" href="https://www.facebook.com/profile.php?id=61557872966488" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn p-0 text-success me-3" href="https://www.tiktok.com/@clicomoficial?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i></a>
+                                <a class="btn p-0 text-success me-3" href="https://www.instagram.com/clicommirageoficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fin de Barra Superior-->
+
+        <!-- Inicio de Navbar & Banner -->
+        <div class="container-fluid nav-bar px-0 px-lg-4 py-lg-0 bg-success ">
+            <div class="container mt-0 ">
+                <nav class="navbar navbar-expand-lg navbar-light  "> 
+                    <a href="index.html" class="navbar-brand ">
+                        <img src="img/CLICOM.png" alt="Logo" width="150" height="100"> 
+                      <!--   <img src="img/Hoja_Clicom.png"  class="rounded float-start" width="20" height="20"  alt=""> -->
+                    <!--   <h1 class="text-red  mb-0 text-end"><i class=""></i>CLICOM</h1>
+                         LOGO CLICOM-->
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <div class="collapse navbar-collapse bn-primary" id="navbarCollapse">
+                        <div class="navbar-nav mx-0 mx-lg-auto ">
+                            <a href="index.html" class="ltext-202 nav-item nav-link  fw-bold ">Inicio</a>
+                            <a href="about.html" class="ltext-202 nav-item nav-link fw-bold ">Conócenos</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                                    <span class="ltext-202 dropdown-toggle fw-bold ">Categorías</span>
+                                </a>
+                                <div class="dropdown-menu">
+                                        <li class="dropdown-submenu">
+                                            <a href="#" class="ltext-202 dropdown-item dropdown-toggle fw-bold" >Linea blanca</a>
+                                            <ul class="dropdown-menuu">
+                                                <li><a href="#" class="dropdown-item fw-bold">Frigobar</a></li>
+                                                <li><a href="#" class="dropdown-item fw-bold">Dispensador</a></li>
+                                                <li><a href="#" class="dropdown-item fw-bold">Calentador de agua</a></li>
+                                                <li><a href="#" class="dropdown-item fw-bold">Horno de Microondas</a></li>
+                                                <li><a href="#" class="dropdown-item fw-bold">Enfriador</a></li>
+                                            </ul>                                         
+                                        </li> 
+                                        <li class="dropdown-submenu">
+                                            <a href="#" class="ltext-202 dropdown-item dropdown-toggle fw-bold">Comercial Ligero</a>
+                                            <ul class="dropdown-menuu">
+                                                <li><a href="#" class="dropdown-item fw-bold">Fan and coil</a></li>
+                                                <li><a href="#" class="dropdown-item fw-bold">Piso techo  </a></li>
+                                                <li><a href="#" class="dropdown-item fw-bold">De paquete  </a></li>
+                                                <li><a href="#" class="dropdown-item fw-bold">Dupteria    </a></li>
+                                            </ul>
+                                        </li>         
+                                        <li class="dropdown-submenu">
+                                            <a href="#" class="ltext-202 dropdown-item dropdown-toggle fw-bold">Minisplit</a>
+                                            <ul class="dropdown-menuu">
+                                                <li><a href="#" class="dropdown-item fw-bold">Inverter</a></li>
+                                                <li><a href="#" class="dropdown-item fw-bold">Convencional</a></li>
+                                            </ul>
+
+
+
+                                        </li>
+                                    
+                                </div>
+                            </div>
+                            <a href="service.html" class="ltext-202 nav-item nav-link fw-bold " >Servicios</a>
+                            <a href="sucursales.html" class="ltext-202 nav-item nav-link fw-bold" >Sucursales</a>
+                           
+                            <a href="contact.html" class="ltext-202 nav-item nav-link fw-bold ">Contáctanos</a>
+                            <a href="#" class="ltext-202 nav-item nav-link fw-bold ">Compra en línea</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                          
+                        <a href="#" class="nav-link btn btn-primary rounded-pill  py-2 px-2 ms-3" data-bs-toggle="dropdown">  
+                            <span class="ltext-202 text-white dropdown-toggle fw-bold ">Blog</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="minisplit.html" class="dropdown-item fw-bold">Cuidar tu minisplit</a>
+                            <a href="manuales.html" class="dropdown-item fw-bold">Manual de uso</a>
+                          <li class="dropdown-submenu">
+                            <a href="#" class="ltext-202 dropdown-item dropdown-toggle fw-bold">Fichas técnicas</a>
+                            <ul class="dropdown-menuu">
+                                <li><a href="convencional.html" class="dropdown-item fw-bold">Convencional</a></li>
+                                <li><a href="inverter.html" class="dropdown-item fw-bold">Inverter</a></li>
+                                <li><a href="ventana.html" class="dropdown-item fw-bold">Ventana</a></li>
+                                <li><a href="comercialligero.html" class="dropdown-item fw-bold">Comercial ligero</a></li>
+                                <li><a href="portatil.html" class="dropdown-item fw-bold">Portatil</a></li>
+                                <li><a href="lineabla.html" class="dropdown-item fw-bold">Linea blanca</a></li>
+                                <li><a href="interfazwifi.html" class="dropdown-item fw-bold">Interfaz Wifi</a></li>
+                            <!--<li><a href="Acondicionado.html" class="dropdown-item fw-bold">Aires acondicionados</a></li> -->  
+                            
+                            </ul>
+                          </li> 
+                        </div>
+                    </div>
+                    <div class="d-none d-xl-flex flex-shrink-0 ps-4">
+                        <a href="#" class="btn btn-light btn-lg-square rounded-circle position-relative wow tada" data-wow-delay=".9s">
+                            <i class="fa fa-phone-alt fa-2x"></i>
+                            <div class="position-absolute" style="top: 7px; right: 12px;">
+                                <span><i class="fa fa-comment-dots text-secondary"></i></span>
+                            </div>
+                        </a>
+                        <div class="d-flex flex-column text-secondary ms-3">
+                            <span>Llamanos! </span>
+                            <a href="tel:+ 961 560 0430"><span class="text-white">+52 961 560 0430</span></a>
+                        </div>
+                    </div>
+                    
+                </nav>
+            </div>
+        </div>
+        <!-- Fin de Navbar & Banner-->
+
+        <div class="container-fluid bg-breadcrumb">
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h4 class="Itext-203 text-primary display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">SUCURSALES <span class="text-primary">CLI</span><span class="text-secondary">COM</span></h4>
+                    
+            </div>
+        </div>
+
+        <div class="container-fluid contact bg-light py-5">
+            <div class="container py-5">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <h4 class="text-primary"></h4>
+                    <h1 class="Itext-203 text-primary display-4 mb-4">Contamos con varias sucursales en toda la República Mexicana</h1>
+                </div>
+                <div class="row g-5">
+                   
+                    
+                    <div class="col-12">
+                        <div>
+                            <div class="row g-4">
+                                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
+                                    <div class="contact-add-item">
+                                        <div class="contact-icon text-primary mb-4">
+                                            <i class="fas fa-map-marker-alt fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <h4>Dirección Matriz</h4>
+                                            <p class="mb-0">Av Urano 668, Jardines del Virginia, 94294 Veracruz, Ver.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.4s">
+                                    <div class="contact-add-item">
+                                        <div class="contact-icon text-primary mb-4">
+                                            <i class="fas fa-envelope fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <h4>Correo</h4>
+                                            <p class="mb-0">soporte@clicom.com.mx</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.6s">
+                                    <div class="contact-add-item">
+                                        <div class="contact-icon text-primary mb-4">
+                                            <i class="fa fa-phone-alt fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <h4>Telefono</h4>
+                                            <p class="mb-0">+ 52 961 560 0430</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.8s">
+                                    <div class="contact-add-item">
+                                        <div class="contact-icon text-primary mb-4">
+                                            <i class="fab fa-firefox-browser fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <h4>Nuestro Sitio</h4>
+                                            <p class="mb-0">clicom.com.mx</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<style>
+      
+    #contenedor {
+        
+        display: flex;
+        width: 100%;
+        height: 70vh;
+        min-height: 450px;
+        background: white;
+        border-radius: 10px;
+        overflow: visible;
+        position: relative;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    #sidebar {
+        width: 300px;
+        min-width: 300px;
+        overflow-y: auto;
+        border-right: 1px solid #ccc;
+        padding: 10px;
+        background: white;
+        transition: all 0.3s ease-in-out;
+    }
+    #sidebar.colapsado {
+        width: 0 !important;
+        min-width: 0 !important;
+        padding: 0 !important;
+        border: none !important;
+        overflow: hidden !important;
+    }
+    #toggle-sidebar, #toggle-darkmode {
+        position: absolute;
+        left: 310px;
+        transform: translateX(50%);
+        z-index: 1001;
+        width: 40px;
+        height: 40px;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 22px;
+        line-height: 40px;
+        text-align: center;
+        padding: 0;
+        user-select: none;
+        transition: left 0.3s ease-in-out, background 0.2s ease;
+    }
+    #toggle-sidebar { top: 30px; }
+    #toggle-darkmode { top: 80px; }
+    #sidebar.colapsado ~ #toggle-sidebar,
+    #sidebar.colapsado ~ #toggle-darkmode {
+        left: 20px;
+        transform: translateX(-50%);
+    }
+    #toggle-sidebar:hover, #toggle-darkmode:hover { background: #0056b3; }
+    #map { flex: 1; min-height: 400px;}
+    #reset-map {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        background: #28a745;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    #reset-map:hover { background: #1e7e34; }
+    #search-box {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+    .sucursal {
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+        cursor: pointer;
+    }
+.sucursal:hover { background: #0f43ee; color: #ffffff; }
+
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oxanium:wght@200..800&display=swap');
+    </style>
+                    <div class="col-12 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="rounded">
+                             <!-- 🟩 MAPA  -->
+    <div class="col-12 wow fadeInUp" data-wow-delay="0.2s">
+    <div class="rounded" style="height: 600px ; ">
+    <!--Contenedor de sucursales-->
+    <div id="contenedor">
+        <div id="sidebar">
+            <h2>Sucursales CLICOM</h2>
+            <input type="text" id="search-box" placeholder="Buscar sucursal..." autocomplete="off" />
+            <button id="reset-map">Reiniciar mapa</button>
+            <div id="lista"></div>
+        </div>
+
+        <!-- Botones flotantes -->
+        <button id="toggle-sidebar" title="Mostrar/Ocultar menú">☰</button>
+        <button id="toggle-darkmode" title="Cambiar modo oscuro">🌙</button>
+
+        <!-- Mapa -->
+        <div id="map"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+    // ======================
+    //  LISTA DE SUCURSALES
+    // ======================
+    const sucursales = [
+        {nombre:"CLICOM CLIMAS DEL PACIFICO",lat:23.20919583888331,lng:-106.4157648724775,horario:"L-V:8:30a.m./6:30p.m.",direccion:"Gutierrez Najera # 110 C-D, Centro, 82000 Mazatlán, Sin.",telefono:"+526699832738",maps:"https://maps.app.goo.gl/xjRFTC4pYowtaz237",foto:"https://lh3.googleusercontent.com/p/AF1QipMbyI4zuBhs_OlJ1mU9te0_hOSfgcXEmBhMvQL6=w408-h306-k-no"},
+        {nombre:"CLICOM CDMX NAUCALPAN",lat:19.46477434632562,lng:-99.2195193432208,horario:"L-V:7:30a.m./5:30p.m.",direccion:"Plásticos 84-2, Ala Sur, Fraccionamiento Industrial, Alce Blanco, 53370 Naucalpan de Juárez, Méx.",telefono:"+525579466695",maps:"https://maps.app.goo.gl/jBCgQCwuKEiJAsd8A",foto:"https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=76LmoCiQg80NMGiviP2KzQ&cb_client=search.gws-prod.gps&w=408&h=240&yaw=193.03639&pitch=0&thumbfov=100"},
+        {nombre:"CLICOM CUERNAVACA FLORES MAGÓN",lat:18.930315946328314,lng:-99.19991458282752,horario:"L-V:8:30a.m./6:30p.m.",direccion:"C. Sonora 100-Bodega 5, Ricardo Flores Magon, 62373 Cuernavaca, Mor.",telefono:"+527772111201",maps:"https://maps.app.goo.gl/phWKMAQiH9ogXntR6",foto:"https://lh3.googleusercontent.com/p/AF1QipN3K3eBbep_bSAfGqUyYtIsIVxzH4vugmFniXgz=w408-h408-k-no"},
+        {nombre:"CLICOM VERACRUZ CUAUHTÉMOC",lat:19.182051475202716,lng:-96.14286411052625,horario:"L-V:8:30a.m./6:30p.m.",direccion:"Av. Cuauhtémoc 4089, entre Campero y JB Lobos, Zona Centro, 91700 Veracruz, Ver.",telefono:"+522291615440",maps:"https://maps.app.goo.gl/HHY7cDj9rehfsTGK7",foto:"https://lh3.googleusercontent.com/p/AF1QipNbMTLPxL4NQIRbUbfstsZFM1c6IwACcyopYgR5=w408-h431-k-no"},
+        {nombre:"CLICOM BOCA DEL RÍO URANO",lat:19.15468613812468,lng:-96.11444253839949,horario:"L-V:8:30a.m./6:30p.m.",direccion:"Av Urano 668, Jardines del Virginia, 94294 Veracruz, Ver.",telefono:"+522291300397",maps:"https://maps.app.goo.gl/ETBqB6SsDMKs3teH7",foto:"https://lh3.googleusercontent.com/p/AF1QipOW5a73MY9Buu73wYHOvpFnZLqeG_ZVRZ_cRu40=w419-h240-k-no"},
+        {nombre:"CLICOM COATZACOALCOS QUADRUM",lat:18.142013888566293,lng:-94.48649460609845,horario:"L-V:8:30a.m./6:30p.m.",direccion:"Plaza Quadrum, Javier Anaya Villazón 102-Local 2, Fovissste, 96536 Coatzacoalcos, Ver.",telefono:"+529212107459",maps:"https://maps.app.goo.gl/EL4b8ZECFiLnNfXD6",foto:"https://lh3.googleusercontent.com/p/AF1QipNfgH0vk7dWJ6-pL43cxiXVk6FDPrFxucL5I90C=w494-h240-k-no"},        
+        {nombre:"CLICOM VILLAHERMOSA CIUDAD INDUSTRIAL",lat:18.039507992310654,lng:-92.90634295490187,horario:"L-V:8:30a.m./6:30p.m.",direccion:"Oxígeno 86010, CENTRO, Cd Industrial, 86010 Villahermosa, Tab.",telefono:"+529931498083",maps:"https://maps.app.goo.gl/LEaBW2yF3eps15Tg8",foto:"https://lh3.googleusercontent.com/p/AF1QipP-LACkaVvX0Z1bPqwImXBDK337haZIgAoQd9hk=w408-h306-k-no"},
+        {nombre:"CLICOM TUXTLA GUTIÉRREZ JUAN CRISPIN",lat:16.760589684741124,lng:-93.17622262223662,horario:"L-V:8:30a.m./6:30p.m.",direccion:"Colonia San Juan Crispin, Carr. Panamericana 6008, Zona Sin Asignación de Nombre de Col 30, 29020 Tuxtla Gutiérrez, Chis.",telefono:"+529612318900",maps:"https://maps.app.goo.gl/3m7BkKnS7curK8Ki7",foto:"https://lh3.googleusercontent.com/p/AF1QipMuafuaSNfY-oXlxJUu-K0thwxXE_Oe0ImC4Sk=w408-h306-k-no"},
+        {nombre:"CLICOM TUXTLA GUTIÉRREZ FOVISSSTE",lat:16.7583785256284,lng:-93.15928305723071,horario:"L-V:8:30a.m./6:30p.m.",direccion:"Blvd. 28 de Agosto 270-Bodega 5, Jardín Corona Fovissste II, 29024 Tuxtla Gutiérrez, Chis.",telefono:"+529612176806",maps:"https://maps.app.goo.gl/tKAFhPXQ4uVbLTVe9",foto:"https://lh3.googleusercontent.com/p/AF1QipMQdkYHP3zrP2PynoACT7vGgzDby7OAkq1WEjYX=w408-h306-k-no"},
+        {nombre:"CLICOM AIRES ACONDICIONADOS LAGUITOS",lat:16.763132297940565,lng:-93.15573102641235,horario:"L-V:8:30a.m./6:30p.m.",direccion:"Blvd. Laguitos num 158, col. Laguitos, 29020 Tuxtla Gutiérrez, Chis.",telefono:"+529616030077",maps:"https://maps.app.goo.gl/hc2RkRkGC21935Yn6",foto:"https://lh3.googleusercontent.com/p/AF1QipMX5pGCDlrONSxZbPfx80F4uCDJDjm9xzArg3ry=w408-h306-k-no"},
+        {nombre:"CLICOM CORPORATIVO LOS SABINOS",lat:16.76081723684835,lng:-93.13639634109987,horario:"L-V:8:30a.m./6:30p.m.",direccion:"Los Sabinos 125, Los Sabinos, 29030 Tuxtla Gutiérrez, Chis.",telefono:"+529612742763",maps:"https://maps.app.goo.gl/KiiEraPbxWsUeZ4N6",foto:"https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=69Se94hnoI1wOjSvvG_CMQ&cb_client=search.gws-prod.gps&w=408&h=240&yaw=267.05884&pitch=0&thumbfov=100"},
+        {nombre:"CLICOM TUXTLA GUTIÉRREZ PERIFÉRICO",lat:16.749870221009516,lng:-93.136071310473,horario:"L-V:8:30a.m./6:30p.m.",direccion:"Perif. Sur Pte. 2020, Penipak, 29060 Tuxtla Gutiérrez, Chis.",telefono:"+529614454329",maps:"https://maps.app.goo.gl/MgP6keriTbrqUpns9",foto:"https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxMd9-hsJdruRK4BUQ-GGXe1odPSh5ZEJlBUb1D-x8QViYg80jFLJwnXa_RmJPE-w8ffh4N4Vb12KE5XKV3iAyEaT0KOelXmIZkCgHmwgc_rbdSpajkCN_GFfTy-KlZjdFm4zBh=w408-h306-k-no"},
+        {nombre:"CLICOM TUXTLA GUTIÉRREZ DIANA CAZADORA",lat:16.74651676092458,lng:-93.08354157871868,horario:"L-V:8:30a.m./6:30p.m.",direccion:"Andrés Serra Rojas 29070, Montserrat, 29070 Tuxtla Gutiérrez, Chis.",telefono:"+529616030077",maps:"https://maps.app.goo.gl/PzvRZDc7EHQSjGQZ7",foto:"https://lh3.googleusercontent.com/p/AF1QipOpUEWDOup2kzDLMbP6lLD5M4bPZ1-tHwRXwOzl=w408-h306-k-no"},
+        {nombre:"CLICOM TAPACHULA TAMARINDOS",lat:14.85594723998702,lng:-92.27484755854636,horario:"L-V:7:30a.m./5:30p.m.",direccion:"Centro Logístico Tamarindos, Libramiento Sur Oriente Supermanzana Bod. 107, 30785 Tapachula, Chis.",telefono:"+529627072633",maps:"https://maps.app.goo.gl/SwpkDfdhNGnZK8Km7",foto:"https://lh3.googleusercontent.com/p/AF1QipMfUKtuSPb-BEQAB07Sj4H2OVrSoPR1L1X6Vnr7=w408-h306-k-no"},
+        {nombre:"CLICOM CAMPECHE LÓPEZ MATEOS",lat:19.83263275058442,lng:-90.55238908002597,horario:"L-V:8:30a.m./6:30p.m.",direccion:"Av López Mateos 374, Prado, 24035 San Francisco de Campeche, Camp.",telefono:"+529811013072",maps:"https://maps.app.goo.gl/T3MtyhoK76gicUh68",foto:"https://lh3.googleusercontent.com/p/AF1QipMC5YH1yAsB6r1Ln4R0u8uXjWA16RIluXyV1Hoo=w408-h306-k-no"},
+        {nombre:"CLICOM AIRES ACONDICIONADOS Campeche Suc. Av. Heroe de Nacozari",lat:19.827101134975518,lng:-90.51129290467509,horario:"L-V:8:30a.m./6:30p.m.",direccion:"Av. Heroe de Nacozari 256-Bodega 10, Col. Las Flores, 24097 San Francisco de Campeche, Camp.",telefono:"+529811386333",maps:"https://maps.app.goo.gl/4Y84H1LbPzacSY2AA",foto:"https://lh3.googleusercontent.com/gps-cs-s/AG0ilSypPAZuSYMKlCCIpFqwximibUvfd38hoz1veEKuQ2lgLDG5kc52MXWX08gCSmNMQIfFf2K1hn6xmt70-D3aLUbf8t0JcGOfqyvLahRJCBWlIYp7rLgHMYNWk7K2CLzbQKe2QdmB=w408-h306-k-no"},
+        {nombre:"CLICOM MÉRIDA BUENAVISTA",lat:21.00186571305975,lng:-89.62200315994345,horario:"L-V:8:30a.m./6:30p.m.",direccion:"C. 60 204, entre 25 y 27, Buenavista, 97127 Mérida, Yuc.",telefono:"+529994699093",maps:"https://maps.app.goo.gl/B7KAerU1auRiELnt6",foto:"https://lh3.googleusercontent.com/gps-cs-s/AG0ilSwbcdIhqNWFBHpOd_jJYqKenhahS2oT9vMaxSU30USTTx6BZP4a0Xo595Mwu6J9hrq-0Y1ow2gyYDrXtKH7_gtvcE5Apy8fiTT7vpK7ts4_IpIHh3sJSJvbqDBwdniIbBxjPsMU=w408-h544-k-no"},
+        {nombre:"CLICOM MÉRIDA MACROPLAZA",lat:20.998657419223083,lng:-89.5653264301684,horario:"L-V:8:30a.m./6:30p.m.",direccion:"Plaza del Valle Local #8, C. 35 Lote 21-x 8 y 10, Leandro Valle, 97138 Mérida, Yuc.",telefono:"+529994958320",maps:"https://maps.app.goo.gl/pQSYhg2ymShg5tkz6",foto:"https://lh3.googleusercontent.com/gps-cs-s/AG0ilSyRAacW5k0sZsovMgQMFMc1tfJcdQ1uh2zEd01cKqgJ9GaY-MANDigKtqg9sBleofAPvLj022TUU52BQ41Nk_vZmuxIy-TelV-O_mXFPs-gP7RPhrHyuX3OUsjhPpuBVKM9dEB4=w408-h307-k-no"},
+        {nombre:"CLICOM MÉRIDA PLAZA DE LA CONSTRUCCIÓN",lat:21.039510856111324,lng:-89.62304311798172,horario:"L-V:8:30a.m./6:30p.m.",direccion:"C. 50 181 x 59 y 61, Centro, 97000 Mérida, Yuc.",telefono:"+529994803176",maps:"https://maps.app.goo.gl/Wpov9pznmC7yJ5qA9",foto:"https://lh3.googleusercontent.com/gps-cs-s/AG0ilSwdtBGRK5wcn4yP1ZHxg_xX1r3uF9G62E_ux8Hc1pIY2aK2LC1GSR07bt7XnnqEok5CGknX2H4HcaIPXzRML0u91rZ9hDG0H=w408-h307-k-no"},
+        {nombre:"CLICOM CANCÚN GAIA",lat:21.092368160623824,lng:-86.84346011046229,horario:"L-V:7:30a.m./5:30p.m.",direccion:"Parque Industrial GAIA,Boulevard Luis Donaldo Colosio BODEGA 11 S Alfredo V. Bofil, Quinta Roo, 77560 Cancún, Q.R.",telefono:"+529984131858",maps:"https://maps.app.goo.gl/5ov6uA4VPuatyzQq5",foto:"https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=xRqnMZb6p0CHaj87eGLSIg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=238.78847&pitch=0&thumbfov=100"}
+    ];
+    // ======================
+    //   CONFIG DE MAPA
+    // ======================
+    const INITIAL_VIEW = [21, -100];
+    const INITIAL_ZOOM = 5;
+
+    const map = L.map('map').setView(INITIAL_VIEW, INITIAL_ZOOM);
+    map.zoomControl.setPosition('bottomright');
+
+    const tileLight = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom:19,
+        attribution:'© OpenStreetMap'
+    }).addTo(map);
+
+    const tileDark = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        maxZoom:19,
+        attribution:'© OpenStreetMap, © CartoDB'
+    });
+
+    const lista = document.getElementById('lista');
+    const searchBox = document.getElementById('search-box');
+    const btnDarkMode = document.getElementById('toggle-darkmode');
+    const markers = [];
+
+    // =========================
+    //   CREAR LISTA + MAPA
+    // =========================
+    function crearListaYMarcadores(filtradas) {
+        lista.innerHTML = "";
+        markers.forEach(m => map.removeLayer(m));
+        markers.length = 0;
+
+        filtradas.forEach(suc => {
+            const marker = L.marker([suc.lat, suc.lng]).addTo(map);
+
+            const popupContent = `
+        <div style="max-width:250px; font-family: Arial;">
+            <img src="${suc.foto}" alt="${suc.nombre}" 
+                style="width:100%; height:auto; border-radius:6px 6px 0 0;">
+            <div style="
+                background:#c40000; 
+                color:white; 
+                padding:6px 10px; 
+                font-weight:bold; 
+                text-align:center;
+                border-radius:0 0 6px 6px;
+                margin-bottom:10px;">
+                ${suc.nombre}
+            </div>
+            <div style="line-height:1.4;">
+                <b>Horario:</b> ${suc.horario}<br>
+                <b>Dirección:</b> ${suc.direccion}<br>
+                <b>Teléfono:</b> ${suc.telefono}<br>
+                <b>Mapa:</b> 
+                <a href="${suc.maps}" target="_blank">Ver en Google Maps</a>
+            </div>
+        </div>
+            `;
+
+            marker.bindPopup(popupContent);
+            marker.on('click', () => map.flyTo([suc.lat, suc.lng], 16));
+            markers.push(marker);
+
+            const item = document.createElement('div');
+            item.className = 'sucursal';
+            item.textContent = suc.nombre;
+            item.onclick = () => {
+                map.flyTo([suc.lat, suc.lng], 16);
+                marker.openPopup();
+            };
+            lista.appendChild(item);
+        });
+    }
+
+    crearListaYMarcadores(sucursales);
+    // ======================
+    // BUSCAR SUCURSAL
+    // ======================
+    searchBox.addEventListener('input', () => {
+        const texto = searchBox.value.trim().toLowerCase();
+        crearListaYMarcadores(
+            texto === "" ? sucursales : sucursales.filter(s => s.nombre.toLowerCase().includes(texto))
+        );
+    });
+    // ======================
+    // COLAPSAR SIDEBAR
+    // ======================
+    const sidebar = document.getElementById("sidebar");
+    const btnSidebar = document.getElementById("toggle-sidebar");
+
+    btnSidebar.addEventListener("click", () => {
+        const colapsado = sidebar.classList.toggle("colapsado");
+        btnSidebar.textContent = colapsado ? "➤" : "☰";
+        setTimeout(() => map.invalidateSize(), 350);
+    });
+
+    // ======================
+    // BOTÓN REINICIAR MAPA
+    // ======================
+    document.getElementById("reset-map").addEventListener("click", () => {
+        map.flyTo(INITIAL_VIEW, INITIAL_ZOOM);
+        searchBox.value = "";
+        crearListaYMarcadores(sucursales);
+    });
+    // ======================
+    // MODO OSCURO / CLARO
+    // ======================
+    let darkMode = false;
+    btnDarkMode.addEventListener("click", () => {
+        if(!darkMode){
+            map.removeLayer(tileLight);
+            tileDark.addTo(map);
+            btnDarkMode.textContent = "☀️";
+            btnDarkMode.title = "Modo Claro";
+        } else {
+            map.removeLayer(tileDark);
+            tileLight.addTo(map);
+            btnDarkMode.textContent = "🌙";
+            btnDarkMode.title = "Modo Oscuro";
+        }
+        darkMode = !darkMode;
+    });
+    </script><!-- ESPACIO VACÍO DONDE ESTABA EL MAPA -->
+                        </div>
+                    </div>
+                    <!-- 🟩 FIN DEL mapa -->
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact End -->
+
+
+ <!-- Inicio Footer  -->
+ <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+    <div class="container py-5">
+        <div class="row g-5  ">
+            <div class="col-xl-10 mx-auto">
+                <div class="mb-4  mx-auto">
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-6 col-xl-5">
+                            <div class="footer-item">
+                                <a href="index.html" class="p-0">
+                                  <!--   <h3 class="text-white"><i class="fab fa-slack me-3"></i> CLICOM</h3>-->
+                                    <img src="img/clicomblaco.png" width="150" height="150" alt="Logo"> 
+                                </a>
+                                <p class="ltext-202 text-white mb-4">Lider No. 1 en el Sureste Mexicano en ventas de Aires Acondicionados</p>
+                                <div class="footer-btn d-flex">
+                                    <a class="btn btn-md-square rounded-circle me-3" href="https://www.facebook.com/profile.php?id=61557872966488" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-md-square rounded-circle me-3" href="https://www.instagram.com/clicommirageoficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-md-square rounded-circle me-3" href="https://www.tiktok.com/@clicomoficial?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i></a>      
+                                </div>
+                            </div>
+                        </div>
+                       
+                       <div class="col-md-6 col-lg-6 col-xl-4">
+                            <div class="footer-item">
+                                <h4 class="mb-4 text-white">Instagram</h4>
+                                <div class="row g-3">
+                                    <div class="col-4">
+                                        <div class="footer-instagram rounded">
+                                            <img src="img/instragram1.png" class="img-fluid w-100" alt="">
+                                            <div class="footer-search-icon">
+                                                <a href="https://www.instagram.com/p/DAJ8i0bP0F8/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==" target="_blank" class="my-auto"><i class="fas fa-link text-white"></i></a>
+                                            </div>
+                                        </div>
+                                   </div>
+                                   <div class="col-4">
+                                        <div class="footer-instagram rounded">
+                                            <img src="img/instragram2.png" class="img-fluid w-100" alt="">
+                                            <div class="footer-search-icon">
+                                                <a href="https://www.instagram.com/p/DAB3j-fPyYH/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="my-auto"><i class="fas fa-link text-white"></i></a>
+                                            </div>
+                                        </div>
+                                   </div>
+                                    <div class="col-4">
+                                        <div class="footer-instagram rounded">
+                                            <img src="img/instragram3.png" class="img-fluid w-100" alt="">
+                                            <div class="footer-search-icon">
+                                                <a href="https://www.instagram.com/p/C-lxzYIPlVg/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="my-auto"><i class="fas fa-link text-white"></i></a>
+                                            </div>
+                                        </div>
+                                   </div>
+                                    <div class="col-4">
+                                        <div class="footer-instagram rounded">
+                                            <img src="img/instragram4.png" class="img-fluid w-100" alt="">
+                                            <div class="footer-search-icon">
+                                                <a href="https://www.instagram.com/p/DACDtD2PlJe/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="my-auto"><i class="fas fa-link text-white"></i></a>
+                                            </div>
+                                        </div>
+                                   </div>
+                                   <div class="col-4">
+                                    <div class="footer-instagram rounded">
+                                        <img src="img/instragram5.png" class="img-fluid w-100" alt="">
+                                        <div class="footer-search-icon">
+                                            <a href="https://www.instagram.com/p/C6FQF1MvC98/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="my-auto"><i class="fas fa-link text-white"></i></a>
+                                        </div>
+                                    </div>
+                               </div>
+                               <div class="col-4">
+                                <div class="footer-instagram rounded">
+                                    <img src="img/instragram6.png" class="img-fluid w-100" alt="">
+                                    <div class="footer-search-icon">
+                                        <a href="https://www.instagram.com/p/C4hANf8vy9B/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="my-auto"><i class="fas fa-link text-white"></i></a>
+                                    </div>
+                                </div>
+                           </div>               
+                         </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="pt-5 " style=" border-top: 1px solid rgba(255, 255, 255, 0.08);">
+                    <div class="row g-0">
+                        <div class="col-12">
+                            <div class="row g-4">
+                                <div class="col-lg-6 col-xl-4">
+                                    <div class="d-flex">
+                                        <div class="btn-xl-square bg-primary text-white rounded p-4 me-4">
+                                            <i class="fas fa-map-marker-alt fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-white">Dirección </h4>
+                                            <p class="mb-0">Av Urano 668, Jardines del Virginia, 94294 Veracruz, Ver.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-xl-4">
+                                    <div class="d-flex">
+                                        <div class="btn-xl-square bg-primary text-white rounded p-4 me-4">
+                                            <i class="fas fa-envelope fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-white">Email</h4>
+                                            <p class="mb-0">soporte@clicom.com.mx</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-xl-4">
+                                    <div class="d-flex">
+                                        <div class="btn-xl-square bg-primary text-white rounded p-4 me-4">
+                                            <i class="fa fa-phone-alt fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-white">Telefono Oficina</h4>
+                                            <p class="mb-0">+52 961-560-0430 </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fin Footer -->
+
+<!-- Inicio Copyright  -->
+<div class=" container-fluid  copyright py-4">
+    <div class="container">
+        <div class="row g-4 align-items-center">
+            <div class="col-md-9 text-center text-md-end mb-md-0">
+                <span class="text-center text-secondary"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>Copyright 2024 - Climas Comerciales S.A de C.V</a> Todo los derechos reservados.</span>
+                <span ><a class="border-bottom text-white" href="indexAP.html">Aviso de privacidad</a></span>
+            </div>
+            <div class="col-md-6 text-center text-md-start text-body">
+                <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+                <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+                <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+             <!-- COMENTADO  Designed By <a class="border-bottom text-white" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom text-white" href="https://themewagon.com">ThemeWagon</a> -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fin Copyright  -->
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+
+<!-- JavaScript Libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/lightbox/js/lightbox.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
+</body>
+
+</html>
