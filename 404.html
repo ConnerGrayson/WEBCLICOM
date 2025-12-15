@@ -3,116 +3,157 @@
 
     <head>
         <meta charset="utf-8">
-        <title>LifeSure - Life Insurance Website Template</title>
+        <title>CLICOM</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
         <meta content="" name="description">
+        <link rel="Icon" href="img/Logo_Nav_CLICOM.jpeg" type="img/x-icon">
 
         <!-- Google Web Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:slnt,wght@-10..0,100..900&display=swap" rel="stylesheet">
-
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oxanium:wght@200..800&display=swap');
+        </style>
         <!-- Icon Font Stylesheet -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-        <!-- Libraries Stylesheet -->
+        <!-- Libreria Stylesheet -->
         <link rel="stylesheet" href="lib/animate/animate.min.css"/>
         <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
         <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
+         
 
         <!-- Customized Bootstrap Stylesheet -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+
+
+
+        <script async>(function(w, d) { var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.setAttribute("src", "https://app.bluecaribu.com/conversion/integration/62f9b1a18a0f493384ef148c04a8e800"); h.appendChild(s); })(window, document);</script>
     </head>
 
     <body>
 
-        <!-- Spinner Start -->
+         <!-- Inicio Spinner  -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
+                <span class="sr-only">Cargando...</span>
             </div>
         </div>
-        <!-- Spinner End -->
+        <!-- Fin Spinner  -->
 
-        <!-- Topbar Start -->
-        <div class="container-fluid topbar px-0 px-lg-4 bg-light py-2 d-none d-lg-block">
+        <!-- Inicio de Barra Superior -->
+        <div class="container-fluid topbar px-0 px-lg-4  py-2 d-none d-lg-block bg-success"> <!--cambiando color-->
             <div class="container">
                 <div class="row gx-0 align-items-center">
                     <div class="col-lg-8 text-center text-lg-start mb-lg-0">
                         <div class="d-flex flex-wrap">
-                            <div class="border-end border-primary pe-3">
-                                <a href="#" class="text-muted small"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find A Location</a>
+                            <div class="border-end border-sucess pe-4">
+                                <a href="sucursales.html" class="text-light medium fw-bold"><i class="fas fa-map-marker-alt text-success me-2"></i>Encuentranos</a>
                             </div>
                             <div class="ps-3">
-                                <a href="mailto:example@gmail.com" class="text-muted small"><i class="fas fa-envelope text-primary me-2"></i>example@gmail.com</a>
+                                <a href="mailto:example@gmail.com" class="text-light medium"><i class="fas fa-envelope text-success me-2"></i>soporte@clicom.com.mx</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 text-center text-lg-end">
                         <div class="d-flex justify-content-end">
-                            <div class="d-flex border-end border-primary pe-3">
-                                <a class="btn p-0 text-primary me-3" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn p-0 text-primary me-3" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="btn p-0 text-primary me-3" href="#"><i class="fab fa-instagram"></i></a>
-                                <a class="btn p-0 text-primary me-0" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                            <div class="dropdown ms-3">
-                                <a href="#" class="dropdown-toggle text-dark" data-bs-toggle="dropdown"><small><i class="fas fa-globe-europe text-primary me-2"></i> English</small></a>
-                                <div class="dropdown-menu rounded">
-                                    <a href="#" class="dropdown-item">English</a>
-                                    <a href="#" class="dropdown-item">Bangla</a>
-                                    <a href="#" class="dropdown-item">French</a>
-                                    <a href="#" class="dropdown-item">Spanish</a>
-                                    <a href="#" class="dropdown-item">Arabic</a>
-                                </div>
-                            </div>
+                            <div class="d-flex border-end border-sucess pe-3">
+                                <a class="btn p-0 text-success me-3" href="https://www.facebook.com/profile.php?id=61557872966488" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn p-0 text-success me-3" href="https://www.tiktok.com/@clicomoficial?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i></a>
+                                <a class="btn p-0 text-success me-3" href="https://www.instagram.com/clicommirageoficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            </div>  
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Topbar End -->
+        <!-- Fin de Barra Superior-->
 
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid nav-bar px-0 px-lg-4 py-lg-0">
-            <div class="container">
-                <nav class="navbar navbar-expand-lg navbar-light"> 
-                    <a href="#" class="navbar-brand p-0">
-                        <h1 class="text-primary mb-0"><i class="fab fa-slack me-2"></i> LifeSure</h1>
-                        <!-- <img src="img/logo.png" alt="Logo"> -->
+        <!-- Inicio de Navbar & Banner -->
+        <div class="container-fluid nav-bar px-0 px-lg-4 py-lg-0 bg-success ">
+            <div class="container mt-0 ">
+                <nav class="navbar navbar-expand-lg navbar-light  "> 
+                    <a href="index.html" class="navbar-brand ">
+                        <img src="img/CLICOM.png" alt="Logo" width="150" height="100"> 
+                      <!--   <img src="img/Hoja_Clicom.png"  class="rounded float-start" width="20" height="20"  alt=""> -->
+                    <!--   <h1 class="text-red  mb-0 text-end"><i class=""></i>CLICOM</h1>
+                         LOGO CLICOM-->
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span class="fa fa-bars"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarCollapse">
-                        <div class="navbar-nav mx-0 mx-lg-auto">
-                            <a href="index.html" class="nav-item nav-link">Home</a>
-                            <a href="about.html" class="nav-item nav-link">About</a>
-                            <a href="service.html" class="nav-item nav-link">Services</a>
-                            <a href="blog.html" class="nav-item nav-link">Blog</a>
-                            <div class="nav-item dropdown active">
+                    <div class="collapse navbar-collapse bn-primary" id="navbarCollapse">
+                        <div class="navbar-nav mx-0 mx-lg-auto ">
+                            <a href="index.html" class=" ltext-202 nav-item nav-link  fw-bold ">Inicio</a>
+                            <a href="about.html" class=" ltext-202 nav-item nav-link fw-bold ">Conócenos</a>
+                            <div class="nav-item dropdown">
                                 <a href="#" class="nav-link" data-bs-toggle="dropdown">
-                                    <span class="dropdown-toggle">Pages</span>
+                                    <span class="ltext-202 dropdown-toggle fw-bold ">Categorías</span>
                                 </a>
                                 <div class="dropdown-menu">
-                                    <a href="feature.html" class="dropdown-item">Our Features</a>
-                                    <a href="team.html" class="dropdown-item">Our team</a>
-                                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                    <a href="FAQ.html" class="dropdown-item">FAQs</a>
-                                    <a href="404.html" class="dropdown-item active">404 Page</a>
+                                        <li class="dropdown-submenu">
+                                            <a href="#" class="ltext-202 dropdown-item dropdown-toggle fw-bold" >Linea blanca</a>
+                                            <ul class="dropdown-menuu">
+                                                <li><a href="#" class="dropdown-item fw-bold">Frigobar</a></li>
+                                                <li><a href="#" class="dropdown-item fw-bold">Dispensador</a></li>
+                                                <li><a href="#" class="dropdown-item fw-bold">Calentador de agua</a></li>
+                                                <li><a href="#" class="dropdown-item fw-bold">Horno de Microondas</a></li>
+                                                <li><a href="#" class="dropdown-item fw-bold">Enfriador</a></li>
+                                            </ul>                                         
+                                        </li> 
+                                        <li class="dropdown-submenu">
+                                            <a href="#" class="ltext-202 dropdown-item dropdown-toggle fw-bold">Comercial Ligero</a>
+                                            <ul class="dropdown-menuu">
+                                                <li><a href="#" class="dropdown-item fw-bold">Fan and coil</a></li>
+                                                <li><a href="#" class="dropdown-item fw-bold">Piso techo  </a></li>
+                                                <li><a href="#" class="dropdown-item fw-bold">De paquete  </a></li>
+                                                <li><a href="#" class="dropdown-item fw-bold">Dupteria    </a></li>
+                                            </ul>
+                                        </li>         
+                                        <li class="dropdown-submenu">
+                                            <a href="#" class="ltext-202 dropdown-item dropdown-toggle fw-bold">Minisplit</a>
+                                            <ul class="dropdown-menuu">
+                                                <li><a href="#" class="dropdown-item fw-bold">Inverter</a></li>
+                                                <li><a href="#" class="dropdown-item fw-bold">Convencional</a></li>
+                                            </ul>
+                                        </li>
                                 </div>
                             </div>
-                            <a href="contact.html" class="nav-item nav-link">Contact</a>
-                            <div class="nav-btn px-3">
-                                <button class="btn-search btn btn-primary btn-md-square rounded-circle flex-shrink-0" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
-                                <a href="#" class="btn btn-primary rounded-pill py-2 px-4 ms-3 flex-shrink-0"> Get a Quote</a>
-                            </div>
+                            <a href="service.html" class="ltext-202 nav-item nav-link fw-bold " >Servicios</a>
+                            <a href="sucursales.html" class="ltext-202 nav-item nav-link fw-bold" >Sucursales</a>
+                           
+                            <a href="contact.html" class="ltext-202 nav-item nav-link fw-bold ">Contáctanos</a>
+                            <a href="#" class="ltext-202 nav-item nav-link fw-bold ">Compra en línea</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                          
+                        <a href="#" class="nav-link btn btn-primary rounded-pill  py-2 px-2 ms-3" data-bs-toggle="dropdown">  
+                            <span class="ltext-202 text-white dropdown-toggle fw-bold ">Blog</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="minisplit.html" class="dropdown-item fw-bold">Cuidar tu minisplit</a>
+                            <a href="manuales.html" class="dropdown-item fw-bold">Manual de uso</a>
+                          <li class="dropdown-submenu">
+                            <a href="#" class="ltext-202 dropdown-item dropdown-toggle fw-bold">Fichas técnicas</a>
+                            <ul class="dropdown-menuu">
+                                                               
+                                <li><a href="convencional.html" class="dropdown-item fw-bold">Convencional</a></li>
+                                <li><a href="inverter.html" class="dropdown-item fw-bold">Inverter</a></li>
+                                <li><a href="ventana.html" class="dropdown-item fw-bold">Ventana</a></li>
+                                <li><a href="comercialligero.html" class="dropdown-item fw-bold">Comercial ligero</a></li>
+                                <li><a href="portatil.html" class="dropdown-item fw-bold">Portatil</a></li>
+                                <li><a href="lineabla.html" class="dropdown-item fw-bold">Linea blanca</a></li>
+                                <li><a href="interfazwifi.html" class="dropdown-item fw-bold">Interfaz Wifi</a></li>
+                            <!--<li><a href="Acondicionado.html" class="dropdown-item fw-bold">Aires acondicionados</a></li> --> 
+                            </ul>
+                          </li> 
                         </div>
                     </div>
                     <div class="d-none d-xl-flex flex-shrink-0 ps-4">
@@ -122,16 +163,19 @@
                                 <span><i class="fa fa-comment-dots text-secondary"></i></span>
                             </div>
                         </a>
-                        <div class="d-flex flex-column ms-3">
-                            <span>Call to Our Experts</span>
-                            <a href="tel:+ 0123 456 7890"><span class="text-dark">Free: + 0123 456 7890</span></a>
+                        <div class="d-flex flex-column text-secondary ms-3">
+                            <span>Llamanos! </span>
+                            <a href="tel:+ 961 560 0430"><span class="text-white">+52 961 560 0430</span></a>
                         </div>
                     </div>
+                    
                 </nav>
             </div>
         </div>
-        <!-- Navbar & Hero End -->
+        <!-- Fin de Navbar & Banner-->
 
+
+        
         <!-- Modal Search Start -->
         <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-fullscreen">
@@ -183,29 +227,28 @@
         <!-- 404 End -->
 
 
-        <!-- Footer Start -->
+         <!-- Inicio Footer  -->
         <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
             <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-xl-9">
-                        <div class="mb-5">
+                <div class="row g-5  ">
+                    <div class="col-xl-10 mx-auto">
+                        <div class="mb-4  mx-auto">
                             <div class="row g-4">
                                 <div class="col-md-6 col-lg-6 col-xl-5">
                                     <div class="footer-item">
                                         <a href="index.html" class="p-0">
-                                            <h3 class="text-white"><i class="fab fa-slack me-3"></i> LifeSure</h3>
-                                            <!-- <img src="img/logo.png" alt="Logo"> -->
+                                          <!--   <h3 class="text-white"><i class="fab fa-slack me-3"></i> CLICOM</h3>-->
+                                            <img src="img/clicomblaco.png" width="150" height="150" alt="Logo"> 
                                         </a>
-                                        <p class="text-white mb-4">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit amet, consectetur adipiscing...</p>
+                                        <p class="ltext-202 text-white mb-4">Líder No. 1 en el Sureste Mexicano en ventas de Aires Acondicionados</p>
                                         <div class="footer-btn d-flex">
-                                            <a class="btn btn-md-square rounded-circle me-3" href="#"><i class="fab fa-facebook-f"></i></a>
-                                            <a class="btn btn-md-square rounded-circle me-3" href="#"><i class="fab fa-twitter"></i></a>
-                                            <a class="btn btn-md-square rounded-circle me-3" href="#"><i class="fab fa-instagram"></i></a>
-                                            <a class="btn btn-md-square rounded-circle me-0" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                            <a class="btn btn-md-square rounded-circle me-3" href="https://www.facebook.com/profile.php?id=61557872966488" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                            <a class="btn btn-md-square rounded-circle me-3" href="https://www.instagram.com/clicommirageoficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+                                            <a class="btn btn-md-square rounded-circle me-3" href="https://www.tiktok.com/@clicomoficial?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i></a>      
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-lg-6 col-xl-3">
+                               <!-- <div class="col-md-6 col-lg-6 col-xl-3">
                                     <div class="footer-item">
                                         <h4 class="text-white mb-4">Useful Links</h4>
                                         <a href="#"><i class="fas fa-angle-right me-2"></i> About Us</a>
@@ -215,65 +258,65 @@
                                         <a href="#"><i class="fas fa-angle-right me-2"></i> Blogs</a>
                                         <a href="#"><i class="fas fa-angle-right me-2"></i> Contact</a>
                                     </div>
-                                </div>
-                                <div class="col-md-6 col-lg-6 col-xl-4">
+                                </div> -->
+                               <div class="col-md-6 col-lg-6 col-xl-4">
                                     <div class="footer-item">
                                         <h4 class="mb-4 text-white">Instagram</h4>
                                         <div class="row g-3">
                                             <div class="col-4">
                                                 <div class="footer-instagram rounded">
-                                                    <img src="img/instagram-footer-1.jpg" class="img-fluid w-100" alt="">
+                                                    <img src="img/instragram1.png" class="img-fluid w-100" alt="">
                                                     <div class="footer-search-icon">
-                                                        <a href="img/instagram-footer-1.jpg" data-lightbox="footerInstagram-1" class="my-auto"><i class="fas fa-link text-white"></i></a>
+                                                        <a href="https://www.instagram.com/p/DAJ8i0bP0F8/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==" target="_blank" class="my-auto"><i class="fas fa-link text-white"></i></a>
                                                     </div>
                                                 </div>
                                            </div>
                                            <div class="col-4">
                                                 <div class="footer-instagram rounded">
-                                                    <img src="img/instagram-footer-2.jpg" class="img-fluid w-100" alt="">
+                                                    <img src="img/instragram2.png" class="img-fluid w-100" alt="">
                                                     <div class="footer-search-icon">
-                                                        <a href="img/instagram-footer-2.jpg" data-lightbox="footerInstagram-2" class="my-auto"><i class="fas fa-link text-white"></i></a>
+                                                        <a href="https://www.instagram.com/p/DAB3j-fPyYH/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="my-auto"><i class="fas fa-link text-white"></i></a>
                                                     </div>
                                                 </div>
                                            </div>
                                             <div class="col-4">
                                                 <div class="footer-instagram rounded">
-                                                    <img src="img/instagram-footer-3.jpg" class="img-fluid w-100" alt="">
+                                                    <img src="img/instragram3.png" class="img-fluid w-100" alt="">
                                                     <div class="footer-search-icon">
-                                                        <a href="img/instagram-footer-3.jpg" data-lightbox="footerInstagram-3" class="my-auto"><i class="fas fa-link text-white"></i></a>
+                                                        <a href="https://www.instagram.com/p/C-lxzYIPlVg/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="my-auto"><i class="fas fa-link text-white"></i></a>
                                                     </div>
                                                 </div>
                                            </div>
                                             <div class="col-4">
                                                 <div class="footer-instagram rounded">
-                                                    <img src="img/instagram-footer-4.jpg" class="img-fluid w-100" alt="">
+                                                    <img src="img/instragram4.png" class="img-fluid w-100" alt="">
                                                     <div class="footer-search-icon">
-                                                        <a href="img/instagram-footer-4.jpg" data-lightbox="footerInstagram-4" class="my-auto"><i class="fas fa-link text-white"></i></a>
-                                                    </div>
-                                                </div>
-                                           </div>
-                                            <div class="col-4">
-                                                <div class="footer-instagram rounded">
-                                                    <img src="img/instagram-footer-5.jpg" class="img-fluid w-100" alt="">
-                                                    <div class="footer-search-icon">
-                                                        <a href="img/instagram-footer-5.jpg" data-lightbox="footerInstagram-5" class="my-auto"><i class="fas fa-link text-white"></i></a>
+                                                        <a href="https://www.instagram.com/p/DACDtD2PlJe/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="my-auto"><i class="fas fa-link text-white"></i></a>
                                                     </div>
                                                 </div>
                                            </div>
                                            <div class="col-4">
-                                                <div class="footer-instagram rounded">
-                                                    <img src="img/instagram-footer-6.jpg" class="img-fluid w-100" alt="">
-                                                    <div class="footer-search-icon">
-                                                        <a href="img/instagram-footer-6.jpg" data-lightbox="footerInstagram-6" class="my-auto"><i class="fas fa-link text-white"></i></a>
-                                                    </div>
+                                            <div class="footer-instagram rounded">
+                                                <img src="img/instragram5.png" class="img-fluid w-100" alt="">
+                                                <div class="footer-search-icon">
+                                                    <a href="https://www.instagram.com/p/C6FQF1MvC98/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="my-auto"><i class="fas fa-link text-white"></i></a>
                                                 </div>
                                             </div>
+                                       </div>
+                                       <div class="col-4">
+                                        <div class="footer-instagram rounded">
+                                            <img src="img/instragram6.png" class="img-fluid w-100" alt="">
+                                            <div class="footer-search-icon">
+                                                <a href="https://www.instagram.com/p/C4hANf8vy9B/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="my-auto"><i class="fas fa-link text-white"></i></a>
+                                            </div>
                                         </div>
-                                    </div>
+                                   </div>               
+                                 </div>
                                 </div>
                             </div>
+                            </div>
                         </div>
-                        <div class="pt-5" style="border-top: 1px solid rgba(255, 255, 255, 0.08);">
+                        <div class="pt-5 " style=" border-top: 1px solid rgba(255, 255, 255, 0.08);">
                             <div class="row g-0">
                                 <div class="col-12">
                                     <div class="row g-4">
@@ -283,8 +326,8 @@
                                                     <i class="fas fa-map-marker-alt fa-2x"></i>
                                                 </div>
                                                 <div>
-                                                    <h4 class="text-white">Address</h4>
-                                                    <p class="mb-0">123 Street New York.USA</p>
+                                                    <h4 class="text-white">Dirección</h4>
+                                                    <p class="mb-0">Av Urano 668, Jardines del Virginia, 94294 Veracruz, Ver.                                                   </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -294,8 +337,8 @@
                                                     <i class="fas fa-envelope fa-2x"></i>
                                                 </div>
                                                 <div>
-                                                    <h4 class="text-white">Mail Us</h4>
-                                                    <p class="mb-0">info@example.com</p>
+                                                    <h4 class="text-white">Email</h4>
+                                                    <p class="mb-0">soporte@clicom.com.mx</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -305,8 +348,8 @@
                                                     <i class="fa fa-phone-alt fa-2x"></i>
                                                 </div>
                                                 <div>
-                                                    <h4 class="text-white">Telephone</h4>
-                                                    <p class="mb-0">(+012) 3456 7890</p>
+                                                    <h4 class="text-white">Teléfono Oficina</h4>
+                                                    <p class="mb-0">+52 961-560-0430 </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -315,53 +358,29 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="col-xl-3">
-                        <div class="footer-item">
-                            <h4 class="text-white mb-4">Newsletter</h4>
-                            <p class="text-white mb-3">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <div class="position-relative rounded-pill mb-4">
-                                <input class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
-                                <button type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">SignUp</button>
-                            </div>
-                            <div class="d-flex flex-shrink-0">
-                                <div class="footer-btn">
-                                    <a href="#" class="btn btn-lg-square rounded-circle position-relative wow tada" data-wow-delay=".9s">
-                                        <i class="fa fa-phone-alt fa-2x"></i>
-                                        <div class="position-absolute" style="top: 2px; right: 12px;">
-                                            <span><i class="fa fa-comment-dots text-secondary"></i></span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="d-flex flex-column ms-3 flex-shrink-0">
-                                    <span>Call to Our Experts</span>
-                                    <a href="tel:+ 0123 456 7890"><span class="text-white">Free: + 0123 456 7890</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
-        <!-- Footer End -->
+        <!-- Fin Footer -->
         
-        <!-- Copyright Start -->
-        <div class="container-fluid copyright py-4">
+        <!-- Inicio Copyright  -->
+        <div class=" container-fluid  copyright py-4">
             <div class="container">
                 <div class="row g-4 align-items-center">
-                    <div class="col-md-6 text-center text-md-end mb-md-0">
-                        <span class="text-body"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right reserved.</span>
+                    <div class="col-md-9 text-center text-md-end mb-md-0">
+                        <span class="text-center text-secondary"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>Copyright 2024 - Climas Comerciales S.A de C.V</a> Todo los derechos reservados.</span>
+                        <span ><a class="border-bottom text-white" href="indexAP.html">Aviso de privacidad</a></span>
                     </div>
                     <div class="col-md-6 text-center text-md-start text-body">
                         <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
                         <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
                         <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                        Designed By <a class="border-bottom text-white" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom text-white" href="https://themewagon.com">ThemeWagon</a>
+                     <!-- COMENTADO  Designed By <a class="border-bottom text-white" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom text-white" href="https://themewagon.com">ThemeWagon</a> -->
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Copyright End -->
+        <!-- Fin Copyright  -->
 
 
         <!-- Back to Top -->
