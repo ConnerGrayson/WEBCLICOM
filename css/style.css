@@ -16,10 +16,11 @@
 }
 /*** Spinner End ***/
 
+/*** BOTON BACK TO TOP/REFRESH ***/
 .back-to-top {
     position: fixed;
-    right: 30px;
-    bottom: 30px;
+    right: 20px;
+    bottom: 20px;
     transition: 0.5s;
     z-index: 99;
 }
@@ -422,13 +423,18 @@
 /***  IMAGEN EDITADA DE PORTADAS DE LAS DEMAS PAGINAS***/
 .bg-breadcrumb {
     position: relative;
+    width: 100% !important;
+    margin: 0 !important;      /* Elimina cualquier espacio con la barra roja */
+    margin-top: 0 !important;  /* Pega la imagen a la barra roja */
+    padding: 80px 0 !important; /* Ajusta la altura del banner */
     overflow: hidden;
-    background: linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)), url(../img/tiendaNosotros12Copia.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 60px 0 60px 0;
-    transition: 0.5s;
+    display: block;            /* Cambiamos flex por block para evitar que se encoja */
+    text-align: center;        /* Centra el texto horizontalmente */
+    
+    /* Propiedades de imagen obligatorias */
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
 }
 
 .bg-breadcrumb .breadcrumb {
@@ -438,16 +444,85 @@
 .bg-breadcrumb .breadcrumb .breadcrumb-item a {
     color: var(--bs-white);
 }
-/*** Single Page Hero Header End ***/
 
-
-.bg-breadcrum {
+.bg-breadcrumb {
     position: relative;
     overflow: hidden;
-    background:  url(../img/prueba1.png);
+    background: linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)), url(../img/tiendaNosotros12Copia.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 60px 0 60px 0;
+    transition: 0.5s;
+}
+
+.banner-contactanos {
+    background: linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)), url(../img/ContactanosBanner.webp);
+    min-height: 355px; /* Ajusta la altura a tu gusto */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-sucursales {
+    background: linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)), url(../img/Puntosdeventa.webp);
+    min-height: 355px; /* Ajusta la altura a tu gusto */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-aboutus {
+    background: linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)), url(../img/aboutus.webp);
+    min-height: 355px; /* Ajusta la altura a tu gusto */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-comerlig {
+    background: linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)), url(../img/comerlig.webp);
+    min-height: 355px; /* Ajusta la altura a tu gusto */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-lineab {
+    background: linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)), url(../img/lineab.webp);
+    min-height: 355px; /* Ajusta la altura a tu gusto */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*** Single Page Hero Header End ***/
+
+/*** INICIO DE SLIDER/CARRUSEL ***/
+.bg-breadcrum {
+    position: relative;
+    overflow: hidden;
+    background:  url(../img/promo3.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #01509E;
     padding: 60px 0 60px 0;
     transition: 0.5s;
 }
@@ -468,10 +543,10 @@
 .bg-breadcrumb1 {
     position: relative;
     overflow: hidden;
-    background:  url(../img/promo3.jpg);
+    background:  url(../img/refacciones.webp);
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: contain; 
     padding: 60px 0 60px 0;
     transition: 0.5s;
 }
@@ -893,7 +968,7 @@
     top: 0;
     left: 0;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    background: rgba(255, 255, 255, 0.9);
+    background: #8499BE;
     z-index: 1;
     animation-name: image-efects;
     animation-duration: 10s;

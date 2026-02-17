@@ -83,7 +83,7 @@
 
     // Facts counter
     $('[data-toggle="counter-up"]').counterUp({
-        delay: 5,
+        delay: 2,
         time: 2000
     });
 
