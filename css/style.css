@@ -1,4 +1,39 @@
+/*IMPORTANDO FONTS*/
+/* Importar Zekton Free */
+@import url('https://db.onlinewebfonts.com/c/164efd3396409b61ba965482f4fa013e?family=Zekton+Free');
 
+/* Importar Myriad Pro */
+@import url('https://db.onlinewebfonts.com/c/a89cf050c859a23e4b6d9cf5989acf9e?family=Myriad+Pro');
+
+/* También puedes usar el @font-face que aparece en tu imagen para mayor compatibilidad */
+@font-face {
+    font-family: "Zekton Free";
+    src: url("https://db.onlinewebfonts.com/t/164efd3396409b61ba965482f4fa013e.eot");
+    src: url("https://db.onlinewebfonts.com/t/164efd3396409b61ba965482f4fa013e.eot?#iefix") format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/164efd3396409b61ba965482f4fa013e.woff2") format("woff2"),
+    url("https://db.onlinewebfonts.com/t/164efd3396409b61ba965482f4fa013e.woff") format("woff"),
+    url("https://db.onlinewebfonts.com/t/164efd3396409b61ba965482f4fa013e.ttf") format("truetype"),
+    url("https://db.onlinewebfonts.com/t/164efd3396409b61ba965482f4fa013e.svg#Zekton Free") format("svg");
+}
+
+@font-face {
+    font-family: "Myriad Pro";
+    src: url("https://db.onlinewebfonts.com/t/a89cf050c859a23e4b6d9cf5989acf9e.eot");
+    src: url("https://db.onlinewebfonts.com/t/a89cf050c859a23e4b6d9cf5989acf9e.eot?#iefix") format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/a89cf050c859a23e4b6d9cf5989acf9e.woff2") format("woff2"),
+    url("https://db.onlinewebfonts.com/t/a89cf050c859a23e4b6d9cf5989acf9e.woff") format("woff"),
+    url("https://db.onlinewebfonts.com/t/a89cf050c859a23e4b6d9cf5989acf9e.ttf") format("truetype"),
+    url("https://db.onlinewebfonts.com/t/a89cf050c859a23e4b6d9cf5989acf9e.svg#Myriad Pro") format("svg");
+}
+
+/* Aplicando las fonts a la página */
+body {
+    font-family: "Myriad Pro", sans-serif !important; /*TEXTOS LARGOS*/
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-nav .nav-link {
+    font-family: "Zekton Free", sans-serif !important; /*TITULOS*/
+}
 
 
 /*** Spinner Start ***/
@@ -43,8 +78,13 @@
 }
 
 .btn-md-square {
-    width: 44px;
-    height: 44px;
+    width: 46px;
+    height: 46px;
+}
+
+/* Esto hará que el icono crezca proporcionalmente al botón */
+.btn-md-square i {
+    font-size: 28px; /* 28px para que se vea equilibrado */
 }
 
 .btn-lg-square {
@@ -156,7 +196,7 @@
     display: flex;
     align-items: center;
     padding: 13px;
-    color: black;
+    color: rgb(0, 0, 0);
     
 }
 
@@ -327,7 +367,7 @@
 }
 
 .ltext-202 {
-    font-family: "Oxanium", sans-serif;
+    
     font-size: 17px;
 }
 
@@ -383,7 +423,7 @@
     height: 100%;
     left: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, .2);
+    /*background: rgba(0, 0, 0, .2);*/
     display: flex;
     align-items: center;
 }
@@ -448,7 +488,7 @@
 .bg-breadcrumb {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)), url(../img/tiendaNosotros12Copia.jpg);
+    background: /*linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)),*/ url(../img/tiendaNosotros12Copia.jpg); /* LO COMNETADO ES EL DEGRADO QUE SE LE DA A LA IMAGEN PARA QUE SE VEA MENOS INTENSO EL COLOR Y QUEDE LA ILUSION DE FONDO*/
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -457,7 +497,7 @@
 }
 
 .banner-contactanos {
-    background: linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)), url(../img/ContactanosBanner.webp);
+    background: /*linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)), */ url(../img/ContactanosBanner.webp);
     min-height: 355px; /* Ajusta la altura a tu gusto */
     background-position: center;
     background-repeat: no-repeat;
@@ -468,7 +508,7 @@
 }
 
 .banner-sucursales {
-    background: linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)), url(../img/Puntosdeventa.webp);
+    background: /*linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)),*/ url(../img/Puntosdeventa.webp);
     min-height: 355px; /* Ajusta la altura a tu gusto */
     background-position: center;
     background-repeat: no-repeat;
@@ -479,7 +519,7 @@
 }
 
 .banner-aboutus {
-    background: linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)), url(../img/aboutus.webp);
+    background: /*linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)),*/ url(../img/aboutus.webp);
     min-height: 355px; /* Ajusta la altura a tu gusto */
     background-position: center;
     background-repeat: no-repeat;
@@ -490,7 +530,7 @@
 }
 
 .banner-comerlig {
-    background: linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)), url(../img/comerlig.webp);
+    background: /*linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)),*/ url(../img/comerlig.webp);
     min-height: 355px; /* Ajusta la altura a tu gusto */
     background-position: center;
     background-repeat: no-repeat;
@@ -501,7 +541,7 @@
 }
 
 .banner-lineab {
-    background: linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)), url(../img/lineab.webp);
+    background: /*linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)),*/ url(../img/lineab.webp);
     min-height: 355px; /* Ajusta la altura a tu gusto */
     background-position: center;
     background-repeat: no-repeat;
@@ -511,6 +551,27 @@
     justify-content: center;
 }
 
+.banner-servicios {
+    background: /*linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)),*/ url(../img/servicios.webp);
+    min-height: 355px; /* Ajusta la altura a tu gusto */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-cuidadomini {
+    background: /*linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)),*/ url(../img/cuidadomini.webp);
+    min-height: 355px; /* Ajusta la altura a tu gusto */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /*** Single Page Hero Header End ***/
 
@@ -522,7 +583,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
-    background-color: #01509E;
+    background-color: #004FA1;
     padding: 60px 0 60px 0;
     transition: 0.5s;
 }
@@ -531,19 +592,13 @@
     position: relative;
 }
 
-/*
-.bg-breadcrum .breadcrum .breadcrum-item a {
-   color: var(--bs-white); 
-}
-   */
-
-
 /*===================*/
 
 .bg-breadcrumb1 {
     position: relative;
     overflow: hidden;
     background:  url(../img/refacciones.webp);
+    background-color: #ffffff;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain; 
@@ -555,11 +610,21 @@
     position: relative;
 }
 
-/*
-.bg-breadcrum .breadcrum .breadcrum-item a {
-   color: var(--bs-white); 
+.bg-breadcrumb2 {
+    position: relative;
+    overflow: hidden;
+    background: #014ea1;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain; 
+    padding: 60px 0 60px 0;
+    transition: 0.5s;
 }
-   */
+
+.bg-breadcrumb2 .breadcrumb2 {
+    position: relative;
+}
+
 
 
 
@@ -960,7 +1025,7 @@
     position: relative;
 }
 
-.contact .contact-img::after {
+.contact .contact-img::after {    /*ANIMACION DETRAS DE LA IMAGEN DE CONTACTANOS*/
     content: "";
     position: absolute;
     width: 100%;
@@ -968,7 +1033,7 @@
     top: 0;
     left: 0;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    background: #8499BE;
+    background: #004FA1;
     z-index: 1;
     animation-name: image-efects;
     animation-duration: 10s;
@@ -1086,6 +1151,123 @@
     background: var(--bs-dark);
     border-top: 1px solid rgba(255, 255, 255, .08);
 }
+
+/* Esto obligará a que todas las barras 'success' cambien de color */
+.bg-success {
+    background-color: #004FA1 !important; /* Cambia este código por el color que desees */
+}
+
+.text-success {
+    color: #161717;
+}
+
+.iconos-redes {
+    color: #ffffff !important; /* Cambia color de los iconos de redes */
+    transition: 0.3s;
+}
+
+.icon-support {
+    color: #BDD63D !important; /*Cambia el color de los iconos de contacto y ubicacion*/
+}
+
+.iconos-redes:hover {
+    color: #cccccc !important; /* Color cuando pasas el ratón por encima */
+}
+
+/* Color personalizado para botones de productos */
+.btn-custom-blue {
+    background-color: #004FA1 !important;
+    border-color: #004FA1 !important;
+    color: #ffffff !important;
+}
+
+.btn-custom-blue:hover {
+    background-color: #003a75 !important; /* Un azul un poco más oscuro al pasar el mouse */
+    border-color: #003a75 !important;
+}
+
+.feature-item .feature-icon {
+    width: 180px !important;  /* Ajusta este número a tu gusto */
+    height: 180px !important; /* Ajusta este número a tu gusto */
+    padding: 10px !important; /* Reducimos el padding para dar espacio a la foto */
+    margin: 0 auto 25px;      /* Centra el contenedor */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-item .feature-icon img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 100%;
+}
+/* Asegura que el contenedor no bloquee la visibilidad */
+.feature-icon {
+    position: relative;
+    overflow: hidden; /* Por si el oscurecimiento se sale de los bordes */
+}
+
+/* Eleva la imagen por encima del efecto hover */
+.feature-icon img {
+    position: relative;
+    z-index: 10; /* Un número alto para asegurar que esté al frente */
+}
+
+/* Si el oscurecimiento es un fondo que cambia, esto asegura que no tape */
+.feature-item:hover .feature-icon img {
+    z-index: 10;
+}
+/* Color exacto del footer CLICOM */
+.footer-custom {
+    background-color: #0c1a33 !important; /* Azul Marino Profundo */
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+}
+
+/* Elimina el borde blanco lateral */
+body {
+    overflow-x: hidden;
+}
+
+/* Estilo de los iconos de redes sociales */
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background: white;
+    color: #0c1a33;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-icon:hover {
+    background: #007bff;
+    color: white;
+}
+
+/* Cuadritos azules de los iconos de contacto */
+.icon-box {
+    min-width: 50px;
+    height: 50px;
+    background: #0066ff;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+/* Sección de abajo (Copyright) */
+.copyright-section {
+    background-color: #081226 !important; /* Un tono más oscuro */
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
 /*** copyright end ***/
 
 
