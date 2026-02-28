@@ -380,7 +380,7 @@ h1, h2, h3, h4, h5, h6, .navbar-nav .nav-link {
 
 
 .header-carousel .header-carousel-item {
-    height: 700px;
+    height: 390px;
 }
 
 .header-carousel .owl-nav .owl-prev,
@@ -489,119 +489,940 @@ h1, h2, h3, h4, h5, h6, .navbar-nav .nav-link {
     position: relative;
     overflow: hidden;
     background: /*linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)),*/ url(../img/tiendaNosotros12Copia.jpg); /* LO COMNETADO ES EL DEGRADO QUE SE LE DA A LA IMAGEN PARA QUE SE VEA MENOS INTENSO EL COLOR Y QUEDE LA ILUSION DE FONDO*/
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    padding: 60px 0 60px 0;
-    transition: 0.5s;
+    background-color: #004FA1;
+    
+    /* 1. Forzamos a que la imagen siempre toque los bordes del contenedor */
+    background-size: 100% 100%; 
+    
+    /* 2. Usamos la proporción exacta de tu imagen (Ancho / Alto) */
+    aspect-ratio: 2688 / 521; 
+    
+    /* 3. Limpieza de espacios */
+    width: 100%;
+    min-height: auto !important; /* Eliminamos el alto de 355px que causaba el hueco */
+    margin: 0 !important;
+    padding: 0 !important;
+    
+    /* 4. Evita comportamientos de línea de texto */
+    display: block; 
+}
+
+/* Ajuste para que el contenedor superior no empuje hacia abajo */
+.container-fluid.nav-bar, .header {
+    margin-bottom: 0 !important;
+}
+
+/* Ajuste para pantallas pequeñas (Móviles) */
+@media (max-width: 768px) {
+    .banner-servicios {
+        /* En celulares, 'contain' dejaría mucho espacio vacío arriba/abajo. 
+           Aquí sí podemos usar cover o una imagen distinta. */
+        background-size: cover;
+        aspect-ratio: 16 / 9; /* Lo hacemos un poco más alto para que se vea bien */
+    }
+}
+
+.banner-productos{
+    background:  url(../img/BANNERS/Banner\ Nuestrosproductos.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #004FA1;
+    
+    /* 1. Forzamos a que la imagen siempre toque los bordes del contenedor */
+    background-size: 100% 100%; 
+    
+    /* 2. Usamos la proporción exacta de tu imagen (Ancho / Alto) */
+    aspect-ratio: 2688 / 521; 
+    
+    /* 3. Limpieza de espacios */
+    width: 100%;
+    min-height: auto !important; /* Eliminamos el alto de 355px que causaba el hueco */
+    margin: 0 !important;
+    padding: 0 !important;
+    
+    /* 4. Evita comportamientos de línea de texto */
+    display: block; 
+}
+
+/* Ajuste para que el contenedor superior no empuje hacia abajo */
+.container-fluid.nav-bar, .header {
+    margin-bottom: 0 !important;
+}
+
+/* Ajuste para pantallas pequeñas (Móviles) */
+@media (max-width: 768px) {
+    .banner-servicios {
+        /* En celulares, 'contain' dejaría mucho espacio vacío arriba/abajo. 
+           Aquí sí podemos usar cover o una imagen distinta. */
+        background-size: cover;
+        aspect-ratio: 16 / 9; /* Lo hacemos un poco más alto para que se vea bien */
+    }
 }
 
 .banner-contactanos {
-    background: /*linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)), */ url(../img/ContactanosBanner.webp);
-    min-height: 355px; /* Ajusta la altura a tu gusto */
+    background:  url(../img/BANNERS/ContactanosBanner.webp);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: #004FA1;
+    
+    /* 1. Forzamos a que la imagen siempre toque los bordes del contenedor */
+    background-size: 100% 100%; 
+    
+    /* 2. Usamos la proporción exacta de tu imagen (Ancho / Alto) */
+    aspect-ratio: 2688 / 521; 
+    
+    /* 3. Limpieza de espacios */
+    width: 100%;
+    min-height: auto !important; /* Eliminamos el alto de 355px que causaba el hueco */
+    margin: 0 !important;
+    padding: 0 !important;
+    
+    /* 4. Evita comportamientos de línea de texto */
+    display: block; 
+}
+
+/* Ajuste para que el contenedor superior no empuje hacia abajo */
+.container-fluid.nav-bar, .header {
+    margin-bottom: 0 !important;
+}
+
+/* Ajuste para pantallas pequeñas (Móviles) */
+@media (max-width: 768px) {
+    .banner-servicios {
+        /* En celulares, 'contain' dejaría mucho espacio vacío arriba/abajo. 
+           Aquí sí podemos usar cover o una imagen distinta. */
+        background-size: cover;
+        aspect-ratio: 16 / 9; /* Lo hacemos un poco más alto para que se vea bien */
+    }
 }
 
 .banner-sucursales {
-    background: /*linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)),*/ url(../img/Puntosdeventa.webp);
-    min-height: 355px; /* Ajusta la altura a tu gusto */
-    background-position: center;
+    background: url(../img/BANNERS/Puntosdeventa.webp);
+     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: #004FA1;
+    
+    /* 1. Forzamos a que la imagen siempre toque los bordes del contenedor */
+    background-size: 100% 100%; 
+    
+    /* 2. Usamos la proporción exacta de tu imagen (Ancho / Alto) */
+    aspect-ratio: 2688 / 521; 
+    
+    /* 3. Limpieza de espacios */
+    width: 100%;
+    min-height: auto !important; /* Eliminamos el alto de 355px que causaba el hueco */
+    margin: 0 !important;
+    padding: 0 !important;
+    
+    /* 4. Evita comportamientos de línea de texto */
+    display: block; 
+}
+
+/* Ajuste para que el contenedor superior no empuje hacia abajo */
+.container-fluid.nav-bar, .header {
+    margin-bottom: 0 !important;
+}
+
+/* Ajuste para pantallas pequeñas (Móviles) */
+@media (max-width: 768px) {
+    .banner-servicios {
+        /* En celulares, 'contain' dejaría mucho espacio vacío arriba/abajo. 
+           Aquí sí podemos usar cover o una imagen distinta. */
+        background-size: cover;
+        aspect-ratio: 16 / 9; /* Lo hacemos un poco más alto para que se vea bien */
+    }
 }
 
 .banner-aboutus {
-    background: /*linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)),*/ url(../img/aboutus.webp);
-    min-height: 355px; /* Ajusta la altura a tu gusto */
-    background-position: center;
+    background: /*linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)),*/ url(../img/BANNERS/aboutus.webp);
+     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: #004FA1;
+    
+    /* 1. Forzamos a que la imagen siempre toque los bordes del contenedor */
+    background-size: 100% 100%; 
+    
+    /* 2. Usamos la proporción exacta de tu imagen (Ancho / Alto) */
+    aspect-ratio: 2688 / 521; 
+    
+    /* 3. Limpieza de espacios */
+    width: 100%;
+    min-height: auto !important; /* Eliminamos el alto de 355px que causaba el hueco */
+    margin: 0 !important;
+    padding: 0 !important;
+    
+    /* 4. Evita comportamientos de línea de texto */
+    display: block; 
+}
+
+/* Ajuste para que el contenedor superior no empuje hacia abajo */
+.container-fluid.nav-bar, .header {
+    margin-bottom: 0 !important;
+}
+
+/* Ajuste para pantallas pequeñas (Móviles) */
+@media (max-width: 768px) {
+    .banner-servicios {
+        /* En celulares, 'contain' dejaría mucho espacio vacío arriba/abajo. 
+           Aquí sí podemos usar cover o una imagen distinta. */
+        background-size: cover;
+        aspect-ratio: 16 / 9; /* Lo hacemos un poco más alto para que se vea bien */
+    }
+}
+
+
+.banner-comercial {
+    background: /*linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)),*/ url(../img/BANNERS/banners\ web\ _comercial.webp);
+     background-position: center;
+    background-repeat: no-repeat;
+    background-color: #004FA1;
+    
+    /* 1. Forzamos a que la imagen siempre toque los bordes del contenedor */
+    background-size: 100% 100%; 
+    
+    /* 2. Usamos la proporción exacta de tu imagen (Ancho / Alto) */
+    aspect-ratio: 2688 / 521; 
+    
+    /* 3. Limpieza de espacios */
+    width: 100%;
+    min-height: auto !important; /* Eliminamos el alto de 355px que causaba el hueco */
+    margin: 0 !important;
+    padding: 0 !important;
+    
+    /* 4. Evita comportamientos de línea de texto */
+    display: block; 
+}
+
+/* Ajuste para que el contenedor superior no empuje hacia abajo */
+.container-fluid.nav-bar, .header {
+    margin-bottom: 0 !important;
+}
+
+/* Ajuste para pantallas pequeñas (Móviles) */
+@media (max-width: 768px) {
+    .banner-servicios {
+        /* En celulares, 'contain' dejaría mucho espacio vacío arriba/abajo. 
+           Aquí sí podemos usar cover o una imagen distinta. */
+        background-size: cover;
+        aspect-ratio: 16 / 9; /* Lo hacemos un poco más alto para que se vea bien */
+    }
 }
 
 .banner-comerlig {
-    background: /*linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)),*/ url(../img/comerlig.webp);
-    min-height: 355px; /* Ajusta la altura a tu gusto */
-    background-position: center;
+    background: /*linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)),*/ url(../img/BANNERS/banners\ web\ _comercial\ ligero.webp);
+     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: #004FA1;
+    
+    /* 1. Forzamos a que la imagen siempre toque los bordes del contenedor */
+    background-size: 100% 100%; 
+    
+    /* 2. Usamos la proporción exacta de tu imagen (Ancho / Alto) */
+    aspect-ratio: 2688 / 521; 
+    
+    /* 3. Limpieza de espacios */
+    width: 100%;
+    min-height: auto !important; /* Eliminamos el alto de 355px que causaba el hueco */
+    margin: 0 !important;
+    padding: 0 !important;
+    
+    /* 4. Evita comportamientos de línea de texto */
+    display: block; 
+}
+
+/* Ajuste para que el contenedor superior no empuje hacia abajo */
+.container-fluid.nav-bar, .header {
+    margin-bottom: 0 !important;
+}
+
+/* Ajuste para pantallas pequeñas (Móviles) */
+@media (max-width: 768px) {
+    .banner-servicios {
+        /* En celulares, 'contain' dejaría mucho espacio vacío arriba/abajo. 
+           Aquí sí podemos usar cover o una imagen distinta. */
+        background-size: cover;
+        aspect-ratio: 16 / 9; /* Lo hacemos un poco más alto para que se vea bien */
+    }
+}
+
+.banner-ventana {
+    background: /*linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)),*/ url(../img/BANNERS/banners\ web\ _de\ ventana.webp);
+     background-position: center;
+    background-repeat: no-repeat;
+    background-color: #004FA1;
+    
+    /* 1. Forzamos a que la imagen siempre toque los bordes del contenedor */
+    background-size: 100% 100%; 
+    
+    /* 2. Usamos la proporción exacta de tu imagen (Ancho / Alto) */
+    aspect-ratio: 2688 / 521; 
+    
+    /* 3. Limpieza de espacios */
+    width: 100%;
+    min-height: auto !important; /* Eliminamos el alto de 355px que causaba el hueco */
+    margin: 0 !important;
+    padding: 0 !important;
+    
+    /* 4. Evita comportamientos de línea de texto */
+    display: block; 
+}
+
+/* Ajuste para que el contenedor superior no empuje hacia abajo */
+.container-fluid.nav-bar, .header {
+    margin-bottom: 0 !important;
+}
+
+/* Ajuste para pantallas pequeñas (Móviles) */
+@media (max-width: 768px) {
+    .banner-servicios {
+        /* En celulares, 'contain' dejaría mucho espacio vacío arriba/abajo. 
+           Aquí sí podemos usar cover o una imagen distinta. */
+        background-size: cover;
+        aspect-ratio: 16 / 9; /* Lo hacemos un poco más alto para que se vea bien */
+    }
+}
+
+.banner-portatil {
+    background: /*linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)),*/ url(../img/BANNERS/banners\ web\ _portatiles.webp);
+     background-position: center;
+    background-repeat: no-repeat;
+    background-color: #004FA1;
+    
+    /* 1. Forzamos a que la imagen siempre toque los bordes del contenedor */
+    background-size: 100% 100%; 
+    
+    /* 2. Usamos la proporción exacta de tu imagen (Ancho / Alto) */
+    aspect-ratio: 2688 / 521; 
+    
+    /* 3. Limpieza de espacios */
+    width: 100%;
+    min-height: auto !important; /* Eliminamos el alto de 355px que causaba el hueco */
+    margin: 0 !important;
+    padding: 0 !important;
+    
+    /* 4. Evita comportamientos de línea de texto */
+    display: block; 
+}
+
+/* Ajuste para que el contenedor superior no empuje hacia abajo */
+.container-fluid.nav-bar, .header {
+    margin-bottom: 0 !important;
+}
+
+/* Ajuste para pantallas pequeñas (Móviles) */
+@media (max-width: 768px) {
+    .banner-servicios {
+        /* En celulares, 'contain' dejaría mucho espacio vacío arriba/abajo. 
+           Aquí sí podemos usar cover o una imagen distinta. */
+        background-size: cover;
+        aspect-ratio: 16 / 9; /* Lo hacemos un poco más alto para que se vea bien */
+    }
+}
+
+.banner-inverter {
+    background: /*linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)),*/ url(../img/BANNERS/banners\ web\ _inverter\ .webp);
+     background-position: center;
+    background-repeat: no-repeat;
+    background-color: #004FA1;
+    
+    /* 1. Forzamos a que la imagen siempre toque los bordes del contenedor */
+    background-size: 100% 100%; 
+    
+    /* 2. Usamos la proporción exacta de tu imagen (Ancho / Alto) */
+    aspect-ratio: 2688 / 521; 
+    
+    /* 3. Limpieza de espacios */
+    width: 100%;
+    min-height: auto !important; /* Eliminamos el alto de 355px que causaba el hueco */
+    margin: 0 !important;
+    padding: 0 !important;
+    
+    /* 4. Evita comportamientos de línea de texto */
+    display: block; 
+}
+
+/* Ajuste para que el contenedor superior no empuje hacia abajo */
+.container-fluid.nav-bar, .header {
+    margin-bottom: 0 !important;
+}
+
+/* Ajuste para pantallas pequeñas (Móviles) */
+@media (max-width: 768px) {
+    .banner-servicios {
+        /* En celulares, 'contain' dejaría mucho espacio vacío arriba/abajo. 
+           Aquí sí podemos usar cover o una imagen distinta. */
+        background-size: cover;
+        aspect-ratio: 16 / 9; /* Lo hacemos un poco más alto para que se vea bien */
+    }
+}
+
+.banner-convencional {
+    background: /*linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)),*/ url(../img/BANNERS/banners\ web\ _convencional.webp);
+     background-position: center;
+    background-repeat: no-repeat;
+    background-color: #004FA1;
+    
+    /* 1. Forzamos a que la imagen siempre toque los bordes del contenedor */
+    background-size: 100% 100%; 
+    
+    /* 2. Usamos la proporción exacta de tu imagen (Ancho / Alto) */
+    aspect-ratio: 2688 / 521; 
+    
+    /* 3. Limpieza de espacios */
+    width: 100%;
+    min-height: auto !important; /* Eliminamos el alto de 355px que causaba el hueco */
+    margin: 0 !important;
+    padding: 0 !important;
+    
+    /* 4. Evita comportamientos de línea de texto */
+    display: block; 
+}
+
+/* Ajuste para que el contenedor superior no empuje hacia abajo */
+.container-fluid.nav-bar, .header {
+    margin-bottom: 0 !important;
+}
+
+/* Ajuste para pantallas pequeñas (Móviles) */
+@media (max-width: 768px) {
+    .banner-servicios {
+        /* En celulares, 'contain' dejaría mucho espacio vacío arriba/abajo. 
+           Aquí sí podemos usar cover o una imagen distinta. */
+        background-size: cover;
+        aspect-ratio: 16 / 9; /* Lo hacemos un poco más alto para que se vea bien */
+    }
 }
 
 .banner-lineab {
-    background: /*linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)),*/ url(../img/lineab.webp);
-    min-height: 355px; /* Ajusta la altura a tu gusto */
+    background: url(../img/BANNERS/lineab.webp);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: #004FA1;
+    
+    /* 1. Forzamos a que la imagen siempre toque los bordes del contenedor */
+    background-size: 100% 100%; 
+    
+    /* 2. Usamos la proporción exacta de tu imagen (Ancho / Alto) */
+    aspect-ratio: 2688 / 521; 
+    
+    /* 3. Limpieza de espacios */
+    width: 100%;
+    min-height: auto !important; /* Eliminamos el alto de 355px que causaba el hueco */
+    margin: 0 !important;
+    padding: 0 !important;
+    
+    /* 4. Evita comportamientos de línea de texto */
+    display: block; 
+}
+
+/* Ajuste para que el contenedor superior no empuje hacia abajo */
+.container-fluid.nav-bar, .header {
+    margin-bottom: 0 !important;
+}
+
+/* Ajuste para pantallas pequeñas (Móviles) */
+@media (max-width: 768px) {
+    .banner-servicios {
+        /* En celulares, 'contain' dejaría mucho espacio vacío arriba/abajo. 
+           Aquí sí podemos usar cover o una imagen distinta. */
+        background-size: cover;
+        aspect-ratio: 16 / 9; /* Lo hacemos un poco más alto para que se vea bien */
+    }
 }
 
 .banner-servicios {
-    background: /*linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)),*/ url(../img/servicios.webp);
-    min-height: 355px; /* Ajusta la altura a tu gusto */
+    background-image: url(../img/BANNERS/servicios.webp);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: #004FA1;
+    
+    /* 1. Forzamos a que la imagen siempre toque los bordes del contenedor */
+    background-size: 100% 100%; 
+    
+    /* 2. Usamos la proporción exacta de tu imagen (Ancho / Alto) */
+    aspect-ratio: 2688 / 521; 
+    
+    /* 3. Limpieza de espacios */
+    width: 100%;
+    min-height: auto !important; /* Eliminamos el alto de 355px que causaba el hueco */
+    margin: 0 !important;
+    padding: 0 !important;
+    
+    /* 4. Evita comportamientos de línea de texto */
+    display: block; 
+}
+
+/* Ajuste para que el contenedor superior no empuje hacia abajo */
+.container-fluid.nav-bar, .header {
+    margin-bottom: 0 !important;
+}
+
+/* Ajuste para pantallas pequeñas (Móviles) */
+@media (max-width: 768px) {
+    .banner-servicios {
+        /* En celulares, 'contain' dejaría mucho espacio vacío arriba/abajo. 
+           Aquí sí podemos usar cover o una imagen distinta. */
+        background-size: cover;
+        aspect-ratio: 16 / 9; /* Lo hacemos un poco más alto para que se vea bien */
+    }
+}
+.banner-PoliticasyGarantias {
+    background-image: url(../img/BANNERS/PoliticasyGarantias.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #004FA1;
+    
+    /* 1. Forzamos a que la imagen siempre toque los bordes del contenedor */
+    background-size: 100% 100%; 
+    
+    /* 2. Usamos la proporción exacta de tu imagen (Ancho / Alto) */
+    aspect-ratio: 2688 / 521; 
+    
+    /* 3. Limpieza de espacios */
+    width: 100%;
+    min-height: auto !important; /* Eliminamos el alto de 355px que causaba el hueco */
+    margin: 0 !important;
+    padding: 0 !important;
+    
+    /* 4. Evita comportamientos de línea de texto */
+    display: block; 
+}
+
+/* Ajuste para que el contenedor superior no empuje hacia abajo */
+.container-fluid.nav-bar, .header {
+    margin-bottom: 0 !important;
+}
+
+/* Ajuste para pantallas pequeñas (Móviles) */
+@media (max-width: 768px) {
+    .banner-servicios {
+        /* En celulares, 'contain' dejaría mucho espacio vacío arriba/abajo. 
+           Aquí sí podemos usar cover o una imagen distinta. */
+        background-size: cover;
+        aspect-ratio: 16 / 9; /* Lo hacemos un poco más alto para que se vea bien */
+    }
+}
+
+.banner-lavadoras {
+    background-image: url(../img/BANNERS/banners\ web\ _lavadoras.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #004FA1;
+    
+    /* 1. Forzamos a que la imagen siempre toque los bordes del contenedor */
+    background-size: 100% 100%; 
+    
+    /* 2. Usamos la proporción exacta de tu imagen (Ancho / Alto) */
+    aspect-ratio: 2688 / 521; 
+    
+    /* 3. Limpieza de espacios */
+    width: 100%;
+    min-height: auto !important; /* Eliminamos el alto de 355px que causaba el hueco */
+    margin: 0 !important;
+    padding: 0 !important;
+    
+    /* 4. Evita comportamientos de línea de texto */
+    display: block; 
+}
+
+/* Ajuste para que el contenedor superior no empuje hacia abajo */
+.container-fluid.nav-bar, .header {
+    margin-bottom: 0 !important;
+}
+
+/* Ajuste para pantallas pequeñas (Móviles) */
+@media (max-width: 768px) {
+    .banner-servicios {
+        /* En celulares, 'contain' dejaría mucho espacio vacío arriba/abajo. 
+           Aquí sí podemos usar cover o una imagen distinta. */
+        background-size: cover;
+        aspect-ratio: 16 / 9; /* Lo hacemos un poco más alto para que se vea bien */
+    }
+}
+.banner-purificadores {
+    background-image: url(../img/BANNERS/banners\ web\ _purificadores.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #004FA1;
+    
+    /* 1. Forzamos a que la imagen siempre toque los bordes del contenedor */
+    background-size: 100% 100%; 
+    
+    /* 2. Usamos la proporción exacta de tu imagen (Ancho / Alto) */
+    aspect-ratio: 2688 / 521; 
+    
+    /* 3. Limpieza de espacios */
+    width: 100%;
+    min-height: auto !important; /* Eliminamos el alto de 355px que causaba el hueco */
+    margin: 0 !important;
+    padding: 0 !important;
+    
+    /* 4. Evita comportamientos de línea de texto */
+    display: block; 
+}
+
+/* Ajuste para que el contenedor superior no empuje hacia abajo */
+.container-fluid.nav-bar, .header {
+    margin-bottom: 0 !important;
+}
+
+/* Ajuste para pantallas pequeñas (Móviles) */
+@media (max-width: 768px) {
+    .banner-servicios {
+        /* En celulares, 'contain' dejaría mucho espacio vacío arriba/abajo. 
+           Aquí sí podemos usar cover o una imagen distinta. */
+        background-size: cover;
+        aspect-ratio: 16 / 9; /* Lo hacemos un poco más alto para que se vea bien */
+    }
+}
+
+.banner-boilers {
+    background-image: url(../img/BANNERS/banners\ web\ _Boilers.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #004FA1;
+    
+    /* 1. Forzamos a que la imagen siempre toque los bordes del contenedor */
+    background-size: 100% 100%; 
+    
+    /* 2. Usamos la proporción exacta de tu imagen (Ancho / Alto) */
+    aspect-ratio: 2688 / 521; 
+    
+    /* 3. Limpieza de espacios */
+    width: 100%;
+    min-height: auto !important; /* Eliminamos el alto de 355px que causaba el hueco */
+    margin: 0 !important;
+    padding: 0 !important;
+    
+    /* 4. Evita comportamientos de línea de texto */
+    display: block; 
+}
+
+/* Ajuste para que el contenedor superior no empuje hacia abajo */
+.container-fluid.nav-bar, .header {
+    margin-bottom: 0 !important;
+}
+
+/* Ajuste para pantallas pequeñas (Móviles) */
+@media (max-width: 768px) {
+    .banner-servicios {
+        /* En celulares, 'contain' dejaría mucho espacio vacío arriba/abajo. 
+           Aquí sí podemos usar cover o una imagen distinta. */
+        background-size: cover;
+        aspect-ratio: 16 / 9; /* Lo hacemos un poco más alto para que se vea bien */
+    }
+}
+
+.banner-microondas {
+    background-image: url(../img/BANNERS/banners\ web\ _microondas.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #004FA1;
+    
+    /* 1. Forzamos a que la imagen siempre toque los bordes del contenedor */
+    background-size: 100% 100%; 
+    
+    /* 2. Usamos la proporción exacta de tu imagen (Ancho / Alto) */
+    aspect-ratio: 2688 / 521; 
+    
+    /* 3. Limpieza de espacios */
+    width: 100%;
+    min-height: auto !important; /* Eliminamos el alto de 355px que causaba el hueco */
+    margin: 0 !important;
+    padding: 0 !important;
+    
+    /* 4. Evita comportamientos de línea de texto */
+    display: block; 
+}
+
+/* Ajuste para que el contenedor superior no empuje hacia abajo */
+.container-fluid.nav-bar, .header {
+    margin-bottom: 0 !important;
+}
+
+/* Ajuste para pantallas pequeñas (Móviles) */
+@media (max-width: 768px) {
+    .banner-servicios {
+        /* En celulares, 'contain' dejaría mucho espacio vacío arriba/abajo. 
+           Aquí sí podemos usar cover o una imagen distinta. */
+        background-size: cover;
+        aspect-ratio: 16 / 9; /* Lo hacemos un poco más alto para que se vea bien */
+    }
+}
+
+.banner-refrigerador {
+    background-image: url(../img/BANNERS/banners\ web\ _refrigeradores.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #004FA1;
+    
+    /* 1. Forzamos a que la imagen siempre toque los bordes del contenedor */
+    background-size: 100% 100%; 
+    
+    /* 2. Usamos la proporción exacta de tu imagen (Ancho / Alto) */
+    aspect-ratio: 2688 / 521; 
+    
+    /* 3. Limpieza de espacios */
+    width: 100%;
+    min-height: auto !important; /* Eliminamos el alto de 355px que causaba el hueco */
+    margin: 0 !important;
+    padding: 0 !important;
+    
+    /* 4. Evita comportamientos de línea de texto */
+    display: block; 
+}
+
+/* Ajuste para que el contenedor superior no empuje hacia abajo */
+.container-fluid.nav-bar, .header {
+    margin-bottom: 0 !important;
+}
+
+/* Ajuste para pantallas pequeñas (Móviles) */
+@media (max-width: 768px) {
+    .banner-servicios {
+        /* En celulares, 'contain' dejaría mucho espacio vacío arriba/abajo. 
+           Aquí sí podemos usar cover o una imagen distinta. */
+        background-size: cover;
+        aspect-ratio: 16 / 9; /* Lo hacemos un poco más alto para que se vea bien */
+    }
+}
+
+.banner-frigobar {
+    background-image: url(../img/BANNERS/banners\ web\ _frigobar.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #004FA1;
+    
+    /* 1. Forzamos a que la imagen siempre toque los bordes del contenedor */
+    background-size: 100% 100%; 
+    
+    /* 2. Usamos la proporción exacta de tu imagen (Ancho / Alto) */
+    aspect-ratio: 2688 / 521; 
+    
+    /* 3. Limpieza de espacios */
+    width: 100%;
+    min-height: auto !important; /* Eliminamos el alto de 355px que causaba el hueco */
+    margin: 0 !important;
+    padding: 0 !important;
+    
+    /* 4. Evita comportamientos de línea de texto */
+    display: block; 
+}
+
+/* Ajuste para que el contenedor superior no empuje hacia abajo */
+.container-fluid.nav-bar, .header {
+    margin-bottom: 0 !important;
+}
+
+/* Ajuste para pantallas pequeñas (Móviles) */
+@media (max-width: 768px) {
+    .banner-servicios {
+        /* En celulares, 'contain' dejaría mucho espacio vacío arriba/abajo. 
+           Aquí sí podemos usar cover o una imagen distinta. */
+        background-size: cover;
+        aspect-ratio: 16 / 9; /* Lo hacemos un poco más alto para que se vea bien */
+    }
+}
+
+.banner-dispensador {
+    background-image: url(../img/BANNERS/banners\ web\ _dispensador.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #004FA1;
+    
+    /* 1. Forzamos a que la imagen siempre toque los bordes del contenedor */
+    background-size: 100% 100%; 
+    
+    /* 2. Usamos la proporción exacta de tu imagen (Ancho / Alto) */
+    aspect-ratio: 2688 / 521; 
+    
+    /* 3. Limpieza de espacios */
+    width: 100%;
+    min-height: auto !important; /* Eliminamos el alto de 355px que causaba el hueco */
+    margin: 0 !important;
+    padding: 0 !important;
+    
+    /* 4. Evita comportamientos de línea de texto */
+    display: block; 
+}
+
+/* Ajuste para que el contenedor superior no empuje hacia abajo */
+.container-fluid.nav-bar, .header {
+    margin-bottom: 0 !important;
+}
+
+/* Ajuste para pantallas pequeñas (Móviles) */
+@media (max-width: 768px) {
+    .banner-servicios {
+        /* En celulares, 'contain' dejaría mucho espacio vacío arriba/abajo. 
+           Aquí sí podemos usar cover o una imagen distinta. */
+        background-size: cover;
+        aspect-ratio: 16 / 9; /* Lo hacemos un poco más alto para que se vea bien */
+    }
+}
+
+.banner-congelador {
+    background-image: url(../img/BANNERS/banners\ web\ _congeladores.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #004FA1;
+    
+    /* 1. Forzamos a que la imagen siempre toque los bordes del contenedor */
+    background-size: 100% 100%; 
+    
+    /* 2. Usamos la proporción exacta de tu imagen (Ancho / Alto) */
+    aspect-ratio: 2688 / 521; 
+    
+    /* 3. Limpieza de espacios */
+    width: 100%;
+    min-height: auto !important; /* Eliminamos el alto de 355px que causaba el hueco */
+    margin: 0 !important;
+    padding: 0 !important;
+    
+    /* 4. Evita comportamientos de línea de texto */
+    display: block; 
+}
+
+/* Ajuste para que el contenedor superior no empuje hacia abajo */
+.container-fluid.nav-bar, .header {
+    margin-bottom: 0 !important;
+}
+
+/* Ajuste para pantallas pequeñas (Móviles) */
+@media (max-width: 768px) {
+    .banner-servicios {
+        /* En celulares, 'contain' dejaría mucho espacio vacío arriba/abajo. 
+           Aquí sí podemos usar cover o una imagen distinta. */
+        background-size: cover;
+        aspect-ratio: 16 / 9; /* Lo hacemos un poco más alto para que se vea bien */
+    }
+}
+.banner-refacciones {
+    background-image: url(../img/BANNERS/banner\ refacciones.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #004FA1;
+    
+    /* 1. Forzamos a que la imagen siempre toque los bordes del contenedor */
+    background-size: 100% 100%; 
+    
+    /* 2. Usamos la proporción exacta de tu imagen (Ancho / Alto) */
+    aspect-ratio: 2688 / 521; 
+    
+    /* 3. Limpieza de espacios */
+    width: 100%;
+    min-height: auto !important; /* Eliminamos el alto de 355px que causaba el hueco */
+    margin: 0 !important;
+    padding: 0 !important;
+    
+    /* 4. Evita comportamientos de línea de texto */
+    display: block; 
+}
+
+/* Ajuste para que el contenedor superior no empuje hacia abajo */
+.container-fluid.nav-bar, .header {
+    margin-bottom: 0 !important;
+}
+
+/* Ajuste para pantallas pequeñas (Móviles) */
+@media (max-width: 768px) {
+    .banner-servicios {
+        /* En celulares, 'contain' dejaría mucho espacio vacío arriba/abajo. 
+           Aquí sí podemos usar cover o una imagen distinta. */
+        background-size: cover;
+        aspect-ratio: 16 / 9; /* Lo hacemos un poco más alto para que se vea bien */
+    }
+}
+
+.banner-proyectoscl {
+    background-image: url(../img/BANNERS/Banner\ Proyectos\ CL.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #004FA1;
+    
+    /* 1. Forzamos a que la imagen siempre toque los bordes del contenedor */
+    background-size: 100% 100%; 
+    
+    /* 2. Usamos la proporción exacta de tu imagen (Ancho / Alto) */
+    aspect-ratio: 2688 / 521; 
+    
+    /* 3. Limpieza de espacios */
+    width: 100%;
+    min-height: auto !important; /* Eliminamos el alto de 355px que causaba el hueco */
+    margin: 0 !important;
+    padding: 0 !important;
+    
+    /* 4. Evita comportamientos de línea de texto */
+    display: block; 
+}
+
+/* Ajuste para que el contenedor superior no empuje hacia abajo */
+.container-fluid.nav-bar, .header {
+    margin-bottom: 0 !important;
+}
+
+/* Ajuste para pantallas pequeñas (Móviles) */
+@media (max-width: 768px) {
+    .banner-servicios {
+        /* En celulares, 'contain' dejaría mucho espacio vacío arriba/abajo. 
+           Aquí sí podemos usar cover o una imagen distinta. */
+        background-size: cover;
+        aspect-ratio: 16 / 9; /* Lo hacemos un poco más alto para que se vea bien */
+    }
 }
 
 .banner-cuidadomini {
-    background: /*linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)),*/ url(../img/cuidadomini.webp);
-    min-height: 355px; /* Ajusta la altura a tu gusto */
+    background: /*linear-gradient(360deg,rgba(250, 216, 216, 0.61), rgba(253, 253, 253, 0.253)),*/ url(../img/BANNERS/cuidadomini.webp);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: #004FA1;
+    
+    /* 1. Forzamos a que la imagen siempre toque los bordes del contenedor */
+    background-size: 100% 100%; 
+    
+    /* 2. Usamos la proporción exacta de tu imagen (Ancho / Alto) */
+    aspect-ratio: 2688 / 521; 
+    
+    /* 3. Limpieza de espacios */
+    width: 100%;
+    min-height: auto !important; /* Eliminamos el alto de 355px que causaba el hueco */
+    margin: 0 !important;
+    padding: 0 !important;
+    
+    /* 4. Evita comportamientos de línea de texto */
+    display: block; 
 }
+
+/* Ajuste para que el contenedor superior no empuje hacia abajo */
+.container-fluid.nav-bar, .header {
+    margin-bottom: 0 !important;
+}
+
+/* Ajuste para pantallas pequeñas (Móviles) */
+@media (max-width: 768px) {
+    .banner-servicios {
+        /* En celulares, 'contain' dejaría mucho espacio vacío arriba/abajo. 
+           Aquí sí podemos usar cover o una imagen distinta. */
+        background-size: cover;
+        aspect-ratio: 16 / 9; /* Lo hacemos un poco más alto para que se vea bien */
+    }
+}
+
+/* PENDIENTE SEGUIR AGREGANDO BANNERS POR SUB CATEGORIAS*/
 
 /*** Single Page Hero Header End ***/
 
-/*** INICIO DE SLIDER/CARRUSEL ***/
-.bg-breadcrum {
-    position: relative;
-    overflow: hidden;
-    background:  url(../img/promo3.webp);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: #004FA1;
-    padding: 60px 0 60px 0;
-    transition: 0.5s;
-}
-
-.bg-breadcrum .breadcrum {
-    position: relative;
-}
-
-/*===================*/
-
+/*** INICIO DE CARRUSEL ***/
 .bg-breadcrumb1 {
     position: relative;
     overflow: hidden;
-    background:  url(../img/refacciones.webp);
-    background-color: #ffffff;
+    background:  url(../img/BANNERS/slidder1.webp);
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: contain; 
+    background-size: contain;
+    background-color: #004fa1;
     padding: 60px 0 60px 0;
     transition: 0.5s;
 }
@@ -613,7 +1434,8 @@ h1, h2, h3, h4, h5, h6, .navbar-nav .nav-link {
 .bg-breadcrumb2 {
     position: relative;
     overflow: hidden;
-    background: #014ea1;
+    background:  url(../img/BANNERS/slidder2.webp);
+    background-color: #004fa1;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain; 
@@ -625,10 +1447,29 @@ h1, h2, h3, h4, h5, h6, .navbar-nav .nav-link {
     position: relative;
 }
 
+.bg-breadcrumb3 {
+    position: relative;
+    overflow: hidden;
+    background:  url(../img/BANNERS/slidder3.webp);
+    background-color: #004fa1;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain; 
+    padding: 60px 0 60px 0;
+    transition: 0.5s;
+}
+
+.bg-breadcrumb3 .breadcrumb3 {
+    position: relative;
+}
 
 
+.contenedor-info {
+    background-color: #ffffff;
+    
+}
 
-
+/*FIN DEL CARRRUSEL */
 
 /*** Feature Start ***/
 .feature .feature-item {
@@ -1262,11 +2103,60 @@ body {
     font-size: 1.2rem;
 }
 
-/* Sección de abajo (Copyright) */
-.copyright-section {
-    background-color: #081226 !important; /* Un tono más oscuro */
-    border-top: 1px solid rgba(255,255,255,0.05);
-}
+
+   /* 1. Forzar que cada categoría sea el punto de referencia para su submenú */
+    .dropdown-submenu {
+        position: relative !important;
+    }
+
+    /* 2. Ocultar TODOS los submenús por defecto */
+    .dropdown-submenu > .dropdown-menu {
+        display: none !important;
+        position: absolute !important;
+        left: 100% !important; /* Lo manda a la derecha del menú principal */
+        top: 0 !important;
+        margin-top: 0 !important;
+        margin-left: 0px !important;
+        z-index: 1000;
+    }
+
+    /* 3. LA CLAVE: Solo mostrar el submenú del LI que tiene el mouse encima */
+    .dropdown-submenu:hover > .dropdown-menu {
+        display: block !important;
+    }
+
+    /* 4. Evitar que el menú de 'Aire' se quede abierto cuando pasas a 'Línea Blanca' */
+    .dropdown-menu > li:hover > .dropdown-menu {
+        display: block !important;
+    }
+
+    /* 5. Estilo visual: que la categoría seleccionada cambie de color (Azul Clicom) */
+    .dropdown-item:hover {
+        background-color: #0056b3 !important;
+        color: white !important;
+    }
+
+    /* 6. Abrir el menú principal de Productos al pasar el mouse (para que el clic funcione) */
+    @media (min-width: 992px) {
+        .nav-item.dropdown:hover > .dropdown-menu {
+            display: block !important;
+        }
+    }
+    /* 7. Cambiar flechas de los submenús para que apunten a la derecha */
+    /* La clase .dropend de Bootstrap debería hacerlo, pero esto lo asegura */
+    .dropdown-submenu > .dropdown-toggle::after {
+        display: inline-block;
+        margin-left: 0.255em;
+        vertical-align: 0.255em;
+        content: "";
+        border-top: 0.3em solid transparent;
+        border-right: 0;
+        border-bottom: 0.3em solid transparent;
+        border-left: 0.3em solid; /* Crea la flecha hacia la derecha */
+        float: right;
+        margin-top: 7px;
+    }
+
 
 /*** copyright end ***/
 

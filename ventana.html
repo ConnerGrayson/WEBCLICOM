@@ -21,58 +21,66 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-        <!-- Libraries Stylesheet -->
+        <!-- Libreria Stylesheet -->
         <link rel="stylesheet" href="lib/animate/animate.min.css"/>
         <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
         <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
+         
 
         <!-- Customized Bootstrap Stylesheet -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+
+        <!-- Creando mapa para las sucursales -->
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+
+
+
+        <!--<script async>(function(w, d) { var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.setAttribute("src", "https://app.bluecaribu.com/conversion/integration/62f9b1a18a0f493384ef148c04a8e800"); h.appendChild(s); })(window, document);</script>-->
     </head>
 
     <body>
 
-        <!-- Spinner Start -->
+        <!-- Inicio Spinner  -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
+                <span class="sr-only">Cargando...</span>
             </div>
         </div>
-        <!-- Spinner End -->
+        <!-- Fin Spinner  -->
 
-        <!-- Topbar Start -->
-        <div class="container-fluid topbar px-0 px-lg-4  py-2 d-none d-lg-block bg-success">
+        <!-- Inicio de Barra Superior -->
+        <div class="container-fluid topbar px-0 px-lg-4  py-2 d-none d-lg-block bg-success"> <!--cambiando color-->
             <div class="container">
                 <div class="row gx-0 align-items-center">
                     <div class="col-lg-8 text-center text-lg-start mb-lg-0">
                         <div class="d-flex flex-wrap">
-                            <div class="border-end border-sucess pe-3">
+                            <div class="border-end border-sucess pe-4">
                                 <a href="sucursales.html" class="text-light medium fw-bold"><i class="fas fa-map-marker-alt icon-support me-2"></i>Encuentranos</a>
                             </div>
                             <div class="ps-3">
-                                <a href="mailto:example@gmail.com" class="text-light medium"><i class="fas fa-envelope icon-support me-2"></i>soporte@clicom.com.mx</a>
+                                <a href="mailto:example@gmail.com" class="text-light medium"><i class="fas fa-envelope icon-support me-2"></i>atencionclientes@clicom.com.mx</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 text-center text-lg-end">
                         <div class="d-flex justify-content-end">
                             <div class="d-flex border-end border-sucess pe-3">
-                                <a class="btn p-0 iconos-redes me-3" href="https://www.facebook.com/profile.php?id=61557872966488" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn p-0 iconos-redes me-3" href="https://www.facebook.com/ClicomAiresAcondicionados" target="_blank"><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn p-0 iconos-redes me-3" href="https://www.tiktok.com/@clicomoficial?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i></a>
                                 <a class="btn p-0 iconos-redes me-3" href="https://www.instagram.com/clicommirageoficial/" target="_blank"><i class="fab fa-instagram"></i></a>
-                            </div>
+                            </div>  
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Topbar End -->
+        <!-- Fin de Barra Superior-->
 
-         <!-- Inicio de Navbar & Banner -->
+        <!-- Inicio de Navbar & Banner -->
         <div class="container-fluid nav-bar px-0 px-lg-4 py-lg-0 bg-success ">
             <div class="container mt-0 ">
                 <nav class="navbar navbar-expand-lg navbar-light  "> 
@@ -88,7 +96,40 @@
                     <div class="collapse navbar-collapse bn-primary" id="navbarCollapse">
                         <div class="navbar-nav mx-0 mx-lg-auto ">
                             <a href="index.html" class=" ltext-202 nav-item nav-link  fw-bold ">Inicio</a>
-                            <a href="productos.html" class=" ltext-202 nav-item nav-link fw-bold ">Productos</a>
+                            <div class="nav-item dropdown">
+                                <a href="productos.html" class="nav-link dropdown-toggle fw-bold">Productos</a>
+                                <ul class="dropdown-menu shadow border-0">
+                                    
+                                    <li class="dropdown-submenu dropend">
+                                        <a class="dropdown-item dropdown-toggle fw-bold" href="#" data-bs-toggle="dropdown">Aire Acondicionado</a>
+                                        <ul class="dropdown-menu shadow border-0">
+                                            <li><a class="dropdown-item" href="inverter.html">Inverter</a></li>
+                                            <li><a class="dropdown-item" href="convencional.html">Convencional</a></li>
+                                            <li><a class="dropdown-item" href="portatil.html">Portátil</a></li>
+                                            <li><a class="dropdown-item" href="ventana.html">De ventana</a></li>
+                                            <li><a class="dropdown-item" href="comercialligero.html">Comercial Ligero</a></li>
+                                            <li><a class="dropdown-item" href="subcomercial.html">Comercial</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="dropdown-submenu dropend">
+                                        <a class="dropdown-item dropdown-toggle fw-bold" href="#" data-bs-toggle="dropdown">Línea Blanca</a>
+                                        <ul class="dropdown-menu shadow border-0">
+                                            <li><a class="dropdown-item" href="lavadoras.html">Lavadoras</a></li>
+                                            <li><a class="dropdown-item" href="boilers.html">Boilers</a></li>
+                                            <li><a class="dropdown-item" href="microondas.html">Microondas</a></li>
+                                            <li><a class="dropdown-item" href="refrigerador.html">Refrigeradores</a></li>
+                                            <li><a class="dropdown-item" href="frigobar.html">Frigobares</a></li>
+                                            <li><a class="dropdown-item" href="congelador.html">Congeladores</a></li>
+                                            <li><a class="dropdown-item" href="dispensador.html">Dispensadores de agua</a></li>
+                                            <li><a class="dropdown-item" href="purificadores.html">Purificadores de aire</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item fw-bold" href="refacciones.html">Refacciones y accesorios</a></li>
+                                </ul>
+                            </div>
                             <a href="service.html" class="ltext-202 nav-item nav-link fw-bold " >Servicios</a>
                             <a href="sucursales.html" class="ltext-202 nav-item nav-link fw-bold" >Sucursales</a>
                             <a href="about.html" class=" ltext-202 nav-item nav-link fw-bold ">Conócenos</a>
@@ -96,27 +137,13 @@
                         </div>
                     </div>
                     <div class="nav-item dropdown">
-                          
-                        <a href="#" class="nav-link btn btn-primary rounded-pill  py-2 px-2 ms-3" data-bs-toggle="dropdown">  
-                            <span class="ltext-202 text-white dropdown-toggle fw-bold ">Blog</span>
+                    <a href="#" class="nav-link btn btn-primary rounded-pill py-2 px-4 ms-lg-3 dropdown-toggle fw-bold text-white" data-bs-toggle="dropdown">
+                            Blog
                         </a>
-                        <div class="dropdown-menu">
+                        <div class="dropdown-menu shadow-sm border-0">
                             <a href="minisplit.html" class="dropdown-item fw-bold">Cuidar tu minisplit</a>
-                            <a href="manuales.html" class="dropdown-item fw-bold">Manual de usuario</a>
-                          <li class="dropdown-submenu">
-                            <a href="#" class="ltext-202 dropdown-item dropdown-toggle fw-bold">Fichas técnicas</a>
-                            <ul class="dropdown-menuu">
-                                                               
-                                <li><a href="convencional.html" class="dropdown-item fw-bold">Convencional</a></li>
-                                <li><a href="inverter.html" class="dropdown-item fw-bold">Inverter</a></li>
-                                <li><a href="ventana.html" class="dropdown-item fw-bold">Ventana</a></li>
-                                <li><a href="comercialligero.html" class="dropdown-item fw-bold">Comercial ligero</a></li>
-                                <li><a href="portatil.html" class="dropdown-item fw-bold">Portatil</a></li>
-                                <li><a href="lineabla.html" class="dropdown-item fw-bold">Linea blanca</a></li>
-                                <li><a href="interfazwifi.html" class="dropdown-item fw-bold">Interfaz Wifi</a></li>
-                            <!--<li><a href="Acondicionado.html" class="dropdown-item fw-bold">Aires acondicionados</a></li> --> 
-                            </ul>
-                          </li> 
+                            <a href="PoliticasyGarantias.html" class="dropdown-item fw-bold">Políticas y Garantías</a>
+                            <a href="proyectoscl.html" class="dropdown-item fw-bold">Proyectos de Comercial Ligero</a>
                         </div>
                     </div>
                     <div class="d-none d-xl-flex flex-shrink-0 ps-4">
@@ -128,7 +155,7 @@
                         </a>
                         <div class="d-flex flex-column text-secondary ms-3">
                             <span>Llamanos! </span>
-                            <a href="tel:+ 961 560 0430"><span class="text-white">+52 961 560 0430</span></a>
+                            <a href="tel:+52 55 8036 8551"><span class="text-white">+52 55 8036 8551</span></a>
                         </div>
                     </div>
                     
@@ -138,82 +165,132 @@
         <!-- Fin de Navbar & Banner-->
 
 
-        
-
-        <!-- Modal Search Start -->
-        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-fullscreen">
-                <div class="modal-content rounded-0">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body d-flex align-items-center bg-primary">
-                        <div class="input-group w-75 mx-auto d-flex">
-                            <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
-                            <span id="search-icon-1" class="btn bg-light border nput-group-text p-3"><i class="fa fa-search"></i></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Modal Search End -->
-
 
         <!-- Header Start -->
-        <div class="container-fluid bg-breadcrumb">
-            <div class="container text-center py-5" style="max-width: 900px;"><br><br>
-                <h4 class="Itext-203 text-primary display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">VENTANA</h4>   
+        <div class="container-fluid bg-breadcrumb banner-ventana">
+            <div class="container text-center py-5" style="max-width: 900px;"><br><br> 
             </div>
         </div>
         <!-- Header End -->
 
-        <!-- Team Start -->
-        <div class="container-fluid team py-5 ">
-            <div class=" container py-5">
+        <!-- INICIO DESCRIPCION PRODUCTO -->
+        <div class="container-fluid feature bg-light py-5">
+            <div class="container py-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h4 class="text-primary"></h4>
-                    <h1 class="display-4 mb-4"></h1>
-                    <p class="mb-0">
-                    </p>
+                    <h4 class="text-primary">MINISPLIT DE VENTANA</h4>
+                    <h1 class="display-4 mb-4">BLUE+EFFICIENT</h1>
+                    <p class="mb-0">          </p>
                 </div>
-                <div class="justify-content-center row g-5">  <!-- Poniendo el DIV en el centro justify-content-center  -->
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/BLUEFFICIENTFICHATECNICA.png" class="img-fluid rounded-top w-100" alt="">
-                                <div class="team-icon">
-                                    <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href="PDF/BLUEFFICIENTFICHATECNICA.pdf" target="_blank"><i class="bi bi-file-earmark-zip-fill"></i></a> 
-                                </div>
-                            </div>
-                            <div class="team-title p-2">
-                                <h4 class="mb-0 text-center">BLU+ EFFICIENT MACC1821N MACC2421N</h4>
-                                <p class="mb-0"></p>
-                            </div>
+                <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-6 wow fadeIn" data-wow-delay="0.1s">
+                            <img class="img-fluid" src="img/PRODUCTOS/VENTANA/ventana_front.png" alt="">
+                        </div>
+                        <div class="col-6 wow fadeIn" data-wow-delay="0.3s">
+                            <img class="img-fluid h-75" src="img/PRODUCTOS/VENTANA/VENTANA.webp" alt="">
+                            
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/BLUEPLUSFICHATECNICA.png" class="img-fluid rounded-top w-100" alt="">
-                                <div class="team-icon">
-                                    <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href="PDF/BLUPLUSFICHATECNICA.pdf" target="_blank"><i class="bi bi-file-earmark-zip-fill"></i></a>
-                                </div>
-                            </div>
-                            <div class="team-title p-2">
-                                <h4 class="mb-0  text-center">BLU+ EFFICIENT MACC0511N MACC0811M MACC1211M</h4>
-                                <p class="mb-0"></p>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+               <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <h1 class="mb-5"><span class="text-uppercase text-primary bg-light px-0">BLUE EFFICIENT</span>
+                        <br> DE VENTANA
+                    </h1>
                     
+                    <div class="mb-5">
+                        <p class="mb-1">Equipos de fácil instalación, diseño silencioso, temporizador de encendido y apagado, alta eficiencia energética, deshumificador y gran poder de ventilación.</p>
+                        
+                    </div>
+
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <div class="mb-4">
+                                <h6 class="mb-1"><i class="fa fa-check text-primary me-2"></i>Diseño Silencioso </h6>
+                                <h6 class="mb-1"><i class="fa fa-check text-primary me-2"></i>Eficiencia Energética </h6>
+                            </div>
+                            
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="mb-4">
+                                <h6 class="mb-1"><i class="fa fa-check text-primary me-2"></i>Timer ON/OFF </h6>
+                                <h6 class="mb-1"><i class="fa fa-check text-primary me-2"></i>Más poder de ventilación </h6>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!--<div class="row g-4 align-items-center mt-2" style="width: 138px;">
+                        <a class="btn btn-primary px-4 me-3" href="">Read More</a>
+                    </div>-->
                 </div>
             </div>
+        <!-- FICHA TECNICA START -->
+                        <div class="container-fluid team py-5">
+                            <div class="container py-5">
+                                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                                    <h4 class="text-primary">ESPECIFICACIONES Y FICHA TÉCNICA</h4>
+                                </div>
+                                
+                                <div class="row g-5 align-items-center justify-content-center">
+                                    <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.4s">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered text-center shadow-sm">
+                                                <thead style="background-color: #004FA1; color: white;">
+                                                    <tr>
+                                                        <th class="py-3">CAPACIDADES</th>
+                                                        <th class="py-3">SOLO FRIO</th>
+                                                        <th class="py-3">FRIO/CALOR</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="text-dark">
+                                                    <tr>
+                                                        <td class="fw-bold">5,000 BTU – 110 V</td>
+                                                        <td>UKNOW_CODE</td>
+                                                        <td>UKNOW_CODE</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="fw-bold">8,000 BTU – 110 V</td>
+                                                        <td>UKNOW_CODE</td>
+                                                        <td>UKNOW_CODE</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="fw-bold">12,000 BTU – 110 V</td>
+                                                        <td>UKNOW_CODE</td>
+                                                        <td>UKNOW_CODE</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
+                                        <div class="team-item">
+                                            <div class="team-img">
+                                                <img src="img/ventanafichatecnica.png" class="img-fluid rounded-top w-100" alt="Ficha Técnica">
+                                                <div class="team-icon">
+                                                    <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href="PDF/ventana_fichatecnica.pdf" target="_blank">
+                                                        <i class="bi bi-file-earmark-zip-fill"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="team-title p-4">
+                                                <h4 class="mb-0 text-center">VENTANA</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- FICHA TECNICA End -->
+                    </div>
+                </div>  
+            </div>
         </div>
-        <!-- Team End -->
-
-
-    
+<!-- DESCRIPCION PRODUCTO End -->
 
        
          <!-- Inicio Footer  -->

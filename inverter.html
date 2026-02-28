@@ -21,56 +21,64 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-        <!-- Libraries Stylesheet -->
+        <!-- Libreria Stylesheet -->
         <link rel="stylesheet" href="lib/animate/animate.min.css"/>
         <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
         <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
+         
 
         <!-- Customized Bootstrap Stylesheet -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+
+        <!-- Creando mapa para las sucursales -->
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+
+
+
+        <!--<script async>(function(w, d) { var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.setAttribute("src", "https://app.bluecaribu.com/conversion/integration/62f9b1a18a0f493384ef148c04a8e800"); h.appendChild(s); })(window, document);</script>-->
     </head>
 
     <body>
 
-        <!-- Spinner Start -->
+        <!-- Inicio Spinner  -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
+                <span class="sr-only">Cargando...</span>
             </div>
         </div>
-        <!-- Spinner End -->
+        <!-- Fin Spinner  -->
 
-        <!-- Topbar Start -->
-        <div class="container-fluid topbar px-0 px-lg-4  py-2 d-none d-lg-block bg-success">
+        <!-- Inicio de Barra Superior -->
+        <div class="container-fluid topbar px-0 px-lg-4  py-2 d-none d-lg-block bg-success"> <!--cambiando color-->
             <div class="container">
                 <div class="row gx-0 align-items-center">
                     <div class="col-lg-8 text-center text-lg-start mb-lg-0">
                         <div class="d-flex flex-wrap">
-                            <div class="border-end border-sucess pe-3">
+                            <div class="border-end border-sucess pe-4">
                                 <a href="sucursales.html" class="text-light medium fw-bold"><i class="fas fa-map-marker-alt icon-support me-2"></i>Encuentranos</a>
                             </div>
                             <div class="ps-3">
-                                <a href="mailto:example@gmail.com" class="text-light medium"><i class="fas fa-envelope icon-support me-2"></i>soporte@clicom.com.mx</a>
+                                <a href="mailto:example@gmail.com" class="text-light medium"><i class="fas fa-envelope icon-support me-2"></i>atencionclientes@clicom.com.mx</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 text-center text-lg-end">
                         <div class="d-flex justify-content-end">
                             <div class="d-flex border-end border-sucess pe-3">
-                                <a class="btn p-0 iconos-redes me-3" href="https://www.facebook.com/profile.php?id=61557872966488" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn p-0 iconos-redes me-3" href="https://www.facebook.com/ClicomAiresAcondicionados" target="_blank"><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn p-0 iconos-redes me-3" href="https://www.tiktok.com/@clicomoficial?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i></a>
                                 <a class="btn p-0 iconos-redes me-3" href="https://www.instagram.com/clicommirageoficial/" target="_blank"><i class="fab fa-instagram"></i></a>
-                            </div>
+                            </div>  
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Topbar End -->
+        <!-- Fin de Barra Superior-->
 
         <!-- Inicio de Navbar & Banner -->
         <div class="container-fluid nav-bar px-0 px-lg-4 py-lg-0 bg-success ">
@@ -88,7 +96,40 @@
                     <div class="collapse navbar-collapse bn-primary" id="navbarCollapse">
                         <div class="navbar-nav mx-0 mx-lg-auto ">
                             <a href="index.html" class=" ltext-202 nav-item nav-link  fw-bold ">Inicio</a>
-                            <a href="productos.html" class=" ltext-202 nav-item nav-link fw-bold ">Productos</a>
+                            <div class="nav-item dropdown">
+                                <a href="productos.html" class="nav-link dropdown-toggle fw-bold">Productos</a>
+                                <ul class="dropdown-menu shadow border-0">
+                                    
+                                    <li class="dropdown-submenu dropend">
+                                        <a class="dropdown-item dropdown-toggle fw-bold" href="#" data-bs-toggle="dropdown">Aire Acondicionado</a>
+                                        <ul class="dropdown-menu shadow border-0">
+                                            <li><a class="dropdown-item" href="inverter.html">Inverter</a></li>
+                                            <li><a class="dropdown-item" href="convencional.html">Convencional</a></li>
+                                            <li><a class="dropdown-item" href="portatil.html">Portátil</a></li>
+                                            <li><a class="dropdown-item" href="ventana.html">De ventana</a></li>
+                                            <li><a class="dropdown-item" href="comercialligero.html">Comercial Ligero</a></li>
+                                            <li><a class="dropdown-item" href="subcomercial.html">Comercial</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="dropdown-submenu dropend">
+                                        <a class="dropdown-item dropdown-toggle fw-bold" href="#" data-bs-toggle="dropdown">Línea Blanca</a>
+                                        <ul class="dropdown-menu shadow border-0">
+                                            <li><a class="dropdown-item" href="lavadoras.html">Lavadoras</a></li>
+                                            <li><a class="dropdown-item" href="boilers.html">Boilers</a></li>
+                                            <li><a class="dropdown-item" href="microondas.html">Microondas</a></li>
+                                            <li><a class="dropdown-item" href="refrigerador.html">Refrigeradores</a></li>
+                                            <li><a class="dropdown-item" href="frigobar.html">Frigobares</a></li>
+                                            <li><a class="dropdown-item" href="congelador.html">Congeladores</a></li>
+                                            <li><a class="dropdown-item" href="dispensador.html">Dispensadores de agua</a></li>
+                                            <li><a class="dropdown-item" href="purificadores.html">Purificadores de aire</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item fw-bold" href="refacciones.html">Refacciones y accesorios</a></li>
+                                </ul>
+                            </div>
                             <a href="service.html" class="ltext-202 nav-item nav-link fw-bold " >Servicios</a>
                             <a href="sucursales.html" class="ltext-202 nav-item nav-link fw-bold" >Sucursales</a>
                             <a href="about.html" class=" ltext-202 nav-item nav-link fw-bold ">Conócenos</a>
@@ -96,27 +137,13 @@
                         </div>
                     </div>
                     <div class="nav-item dropdown">
-                          
-                        <a href="#" class="nav-link btn btn-primary rounded-pill  py-2 px-2 ms-3" data-bs-toggle="dropdown">  
-                            <span class="ltext-202 text-white dropdown-toggle fw-bold ">Blog</span>
+                    <a href="#" class="nav-link btn btn-primary rounded-pill py-2 px-4 ms-lg-3 dropdown-toggle fw-bold text-white" data-bs-toggle="dropdown">
+                            Blog
                         </a>
-                        <div class="dropdown-menu">
+                        <div class="dropdown-menu shadow-sm border-0">
                             <a href="minisplit.html" class="dropdown-item fw-bold">Cuidar tu minisplit</a>
-                            <a href="manuales.html" class="dropdown-item fw-bold">Manual de usuario</a>
-                          <li class="dropdown-submenu">
-                            <a href="#" class="ltext-202 dropdown-item dropdown-toggle fw-bold">Fichas técnicas</a>
-                            <ul class="dropdown-menuu">
-                                                               
-                                <li><a href="convencional.html" class="dropdown-item fw-bold">Convencional</a></li>
-                                <li><a href="inverter.html" class="dropdown-item fw-bold">Inverter</a></li>
-                                <li><a href="ventana.html" class="dropdown-item fw-bold">Ventana</a></li>
-                                <li><a href="comercialligero.html" class="dropdown-item fw-bold">Comercial ligero</a></li>
-                                <li><a href="portatil.html" class="dropdown-item fw-bold">Portatil</a></li>
-                                <li><a href="lineabla.html" class="dropdown-item fw-bold">Linea blanca</a></li>
-                                <li><a href="interfazwifi.html" class="dropdown-item fw-bold">Interfaz Wifi</a></li>
-                            <!--<li><a href="Acondicionado.html" class="dropdown-item fw-bold">Aires acondicionados</a></li> --> 
-                            </ul>
-                          </li> 
+                            <a href="PoliticasyGarantias.html" class="dropdown-item fw-bold">Políticas y Garantías</a>
+                            <a href="proyectoscl.html" class="dropdown-item fw-bold">Proyectos de Comercial Ligero</a>
                         </div>
                     </div>
                     <div class="d-none d-xl-flex flex-shrink-0 ps-4">
@@ -128,7 +155,7 @@
                         </a>
                         <div class="d-flex flex-column text-secondary ms-3">
                             <span>Llamanos! </span>
-                            <a href="tel:+ 961 560 0430"><span class="text-white">+52 961 560 0430</span></a>
+                            <a href="tel:+52 55 8036 8551"><span class="text-white">+52 55 8036 8551</span></a>
                         </div>
                     </div>
                     
@@ -137,227 +164,98 @@
         </div>
         <!-- Fin de Navbar & Banner-->
 
-        <!-- Header Start -->
-        <div class="container-fluid bg-breadcrumb">
-            <div class="container text-center py-5" style="max-width: 900px;"><br><br>
-                <h4 class="Itext-203 text-primary display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">INVERTER</h4>   
-            </div>
+        <!-- banner Start -->
+        <div class="container-fluid bg-breadcrumb banner-inverter"> 
         </div>
         <!-- Header End -->
 
-        <!-- Team Start -->
-        <div class="container-fluid team py-5 ">
-            <div class=" container py-5">
+        <!-- SUBCATEGORIA INVERTER Start -->
+
+
+        <div class="container-fluid feature bg-light py-5">
+            <div class="container py-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                     <h4 class="text-primary"></h4>
                     <h1 class="display-4 mb-4"></h1>
-                    <p class="mb-0">
-                    </p>
+                    <p class="mb-0"><!--"TXT"--></p>
                 </div>
-                <div class="justify-content-center row g-5">  <!-- Poniendo el DIV en el centro justify-content-center  -->
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/MAGNUM22FICHATENICA.png" class="img-fluid rounded-top w-100" alt="">
-                                <div class="team-icon">
-                                    <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href="PDF/MAGNUM22FICHATECNICA.pdf" target="_blank"><i class="bi bi-file-earmark-zip-fill"></i></a> 
-                                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
+                        <a href="magnum22.html" class="text-decoration-none">
+                        <div class="feature-item p-4 pt-0">
+                            <div class="feature-icon mb-4" style="width: 150px; height: 150px; margin: 0 auto;">
+                                <img src="img/PRODUCTOS/MINISPLIT/INVERTER/MAGNUM 22.webp" alt="Comercial" class="img-fluid" style="width: 100%; height: 100%; object-fit: contain;">
                             </div>
-                            <div class="team-title p-4">
-                                <h4 class="mb-0">MAGNUM 22</h4>
-                                <p class="mb-0"></p>
-                            </div>
+                            <h4 class="mb-4">Magnum 22 </h4>
+                            <p class="mb-4">Solo Frio y Frio/Calor.</p>  
                         </div>
+                        </a>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/CIMAGNUMFICHATECNICA.png" class="img-fluid rounded-top w-100" alt="">
-                                <div class="team-icon">
-                                    <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href="PDF/CIMAGNUMFICHATECNICA.pdf" target="_blank"><i class="bi bi-file-earmark-zip-fill"></i></a>
-                                </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
+                        <a href="inverterx.html" class="text-decoration-none">
+                        <div class="feature-item p-4 pt-0">
+                            <div class="feature-icon p-4 mb-4">
+                                <img src="img/PRODUCTOS/MINISPLIT/INVERTER/INVERTER X_.webp" alt="Comercial Ligero" class="img-fluid" style="width: 80px; height: 80px; object-fit: contain;">
                             </div>
-                            <div class="team-title p-4">
-                                <h4 class="mb-0 text-center">CI MAGNUM</h4>
-                                <p class="mb-0"></p>
-                            </div>
+                            <h4 class="mb-4">Inverter X </h4>
+                            <p class="mb-4">Solo Frio Y Frio/Calor.</p>
                         </div>
+                        </a>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/INVERTERXFICHATENICA.png" class="img-fluid rounded-top w-100" alt="">
-                                <div class="team-icon">
-                                    <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href="PDF/INVERTERXFICHATECNICA.pdf" target="_blank"><i class="bi bi-file-earmark-zip-fill"></i></a>
-                                </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
+                        <a href="x32.html" class="text-decoration-none">
+                        <div class="feature-item p-4 pt-0">
+                            <div class="feature-icon p-4 mb-4">
+                                <img src="img/PRODUCTOS/MINISPLIT/INVERTER/X32.webp" alt="Ventana" class="img-fluid" style="width: 80px; height: 80px; object-fit: contain;">
                             </div>
-                            <div class="team-title p-4">
-                                <h4 class="mb-0 text-center">INVERTER X</h4>
-                                <p class="mb-0"></p>
-                            </div>
+                            <h4 class="mb-4">X32</h4>
+                            <p class="mb-4">Solo Frio y Frio/Calor.</p>
                         </div>
+                        </a>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/INVERTER17FICHATENICA.png" class="img-fluid rounded-top w-100" alt="">
-                                <div class="team-icon">
-                                    <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href="PDF/INVERTER17FICHATENICA.pdf" target="_blank"><i class="bi bi-file-earmark-zip-fill"></i></a>
-                                </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
+                        <a href="v32.html" class="text-decoration-none">
+                        <div class="feature-item p-4 pt-0">
+                            <div class="feature-icon p-4 mb-4">
+                                <img src="img/PRODUCTOS/MINISPLIT/INVERTER/V32.webp" alt="Minisplit" class="img-fluid" style="width: 80px; height: 80px; object-fit: contain;">
                             </div>
-                            <div class="team-title p-4">
-                                <h4 class="mb-0 text-center">INVERTER 17</h4>
-                                <p class="mb-0"></p>
-                            </div>
+                            <h4 class="mb-4">V32</h4>
+                            <p class="mb-4">Solo Frio y Frio/Calor.</p>
                         </div>
+                        </a>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/MAGNUM17FICHATENICA.png" class="img-fluid rounded-top w-100" alt="">
-                                <div class="team-icon">
-                                    <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href="PDF/MAGNUM17FICHATENICA.pdf" target="_blank"><i class="bi bi-file-earmark-zip-fill"></i></a>
-                                </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
+                        <a href="magnum18.html" class="text-decoration-none">
+                        <div class="feature-item p-4 pt-0">
+                            <div class="feature-icon p-4 mb-4">
+                                <img src="img/PRODUCTOS/MINISPLIT/INVERTER/MAGNUM18.webp" alt="Multi Split" class="img-fluid" style="width: 80px; height: 80px; object-fit: contain;">
                             </div>
-                            <div class="team-title p-4">
-                                <h4 class="mb-0 text-center">MAGNUM 17</h4>
-                                <p class="mb-0"></p>
-                            </div>
+                            <h4 class="mb-4">MAGNUM 18</h4>
+                            <p class="mb-4">Frio/Calor.</p>
                         </div>
+                        </a>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/FLEXFICHATECNICA.png" class="img-fluid rounded-top w-100" alt="">
-                                <div class="team-icon">
-                                    <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href="PDF/FLEXFICHATECNICA.pdf" target="_blank"><i class="bi bi-file-earmark-zip-fill"></i></a>
-                                </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
+                        <a href="inverter17.html" class="text-decoration-none">
+                        <div class="feature-item p-4 pt-0">
+                            <div class="feature-icon p-4 mb-4">
+                                <img src="img/PRODUCTOS/MINISPLIT/INVERTER/INVERTER 17.webp" alt="Multi Split" class="img-fluid" style="width: 80px; height: 80px; object-fit: contain;">
                             </div>
-                            <div class="team-title p-4">
-                                <h4 class="mb-0 text-center">FLEX INVERTER</h4>
-                                <p class="mb-0"></p>
-                            </div>
+                            <h4 class="mb-4">INVERTER 17</h4>
+                            <p class="mb-4">Frio/Calor.</p>
                         </div>
+                        </a>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/INVERTERXFICHATECNICA.png" class="img-fluid rounded-top w-100" alt="">
-                                <div class="team-icon">
-                                    <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href="PDF/INVERTERXXFICHATECNICA.pdf" target="_blank"><i class="bi bi-file-earmark-zip-fill"></i></a>
-                                </div>
-                            </div>
-                            <div class="team-title p-4">
-                                <h4 class="mb-0 text-center">INVERTER X</h4>
-                                <p class="mb-0"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/INVERTER17FICHATENICAA.png" class="img-fluid rounded-top w-100" alt="">
-                                <div class="team-icon">
-                                    <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href="PDF/INVERTER17FICHATENICAA.pdf" target="_blank"><i class="bi bi-file-earmark-zip-fill"></i></a>
-                                </div>
-                            </div>
-                            <div class="team-title p-4">
-                                <h4 class="mb-0 text-center">INVERTER 17</h4>
-                                <p class="mb-0"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/MAGNUM21FICHATECNICA.png" class="img-fluid rounded-top w-100" alt="">
-                                <div class="team-icon">
-                                    <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href="PDF/MAGNUM21FICHATENICA.pdf" target="_blank"><i class="bi bi-file-earmark-zip-fill"></i></a>
-                                </div>
-                            </div>
-                            <div class="team-title p-4">
-                                <h4 class="mb-0 text-center">MAGNUM 21 PLATINUM </h4>
-                                <p class="mb-0"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/MAGNUM21INVEFICHATECNICA.png" class="img-fluid rounded-top w-100" alt="">
-                                <div class="team-icon">
-                                    <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href="PDF/MAGNUM21INVERFICHATENICA.pdf" target="_blank"><i class="bi bi-file-earmark-zip-fill"></i></a>
-                                </div>
-                            </div>
-                            <div class="team-title p-4">
-                                <h4 class="mb-0 text-center">MAGNUM 21 INVERTER</h4>
-                                <p class="mb-0"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/MAGNUM18INVERFICHATENICA.png" class="img-fluid rounded-top w-100" alt="">
-                                <div class="team-icon">
-                                    <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href="PDF/MAGNUM18INVERFICHATECNICA.pdf" target="_blank"><i class="bi bi-file-earmark-zip-fill"></i></a>
-                                </div>
-                            </div>
-                            <div class="team-title p-4">
-                                <h4 class="mb-0 text-center">MAGNUM 18 </h4>
-                                <p class="mb-0"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/V32INVERTERFICHATECNICA.png" class="img-fluid rounded-top w-100" alt="">
-                                <div class="team-icon">
-                                    <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href="PDF/V32FICHATECNICA.pdf" target="_blank"><i class="bi bi-file-earmark-zip-fill"></i></a>
-                                </div>
-                            </div>
-                            <div class="team-title p-4">
-                                <h4 class="mb-0 text-center">V32 INVERTER</h4>
-                                <p class="mb-0"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/X32INVERFICHATECNICA2.png" class="img-fluid rounded-top w-100" alt="">
-                                <div class="team-icon">
-                                    <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href="PDF/MAGNUM21INVERFICHATENICA.pdf" target="_blank"><i class="bi bi-file-earmark-zip-fill"></i></a>
-                                </div>
-                            </div>
-                            <div class="team-title p-4">
-                                <h4 class="mb-0 text-center">X32 INVERTER</h4>
-                                <p class="mb-0"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/VOXINVERTERFICHATECNICA.png" class="img-fluid rounded-top w-100" alt="">
-                                <div class="team-icon">
-                                    <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href="PDF/VOXINVERTERFICHATECNICA.pdf" target="_blank"><i class="bi bi-file-earmark-zip-fill"></i></a>
-                                </div>
-                            </div>
-                            <div class="team-title p-4">
-                                <h4 class="mb-0 text-center">VOX INVERTER</h4>
-                                <p class="mb-0"></p>
-                            </div>
-                        </div>
-                    </div>  
+
                 </div>
             </div>
         </div>
-        <!-- Team End -->
-
-
-    
+<!--FIN SUBCATEGORIA INVERTER-->   
 
        
          <!-- Inicio Footer  -->
@@ -439,11 +337,7 @@
                         <span class="text-center text-secondary"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>Copyright 2024 - Climas Comerciales S.A de C.V</a> Todo los derechos reservados.</span>
                         <span ><a class="border-bottom text-white" href="indexAP.html">Aviso de privacidad</a></span>
                     </div>
-                    <div class="col-md-6 text-center text-md-start text-body">
-                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
-                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
-                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                     <!-- COMENTADO  Designed By <a class="border-bottom text-white" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom text-white" href="https://themewagon.com">ThemeWagon</a> -->
+                    <div class="col-md-6 text-center text-md-start text-body">                        
                     </div>
                 </div>
             </div>
